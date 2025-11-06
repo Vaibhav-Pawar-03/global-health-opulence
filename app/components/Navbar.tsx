@@ -60,12 +60,13 @@ export default function Navbar() {
           {/* Mobile Menu Sheet */}
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
+             <Button className="md:hidden">
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col h-full">
                 {/* Mobile logo */}
                 <div className="flex items-center justify-start p-4 border-b">
