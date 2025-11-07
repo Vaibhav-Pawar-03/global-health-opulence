@@ -1,15 +1,8 @@
 'use client';
 
-// Robust, sandbox-safe implementation of the "Compare Your Surgical Costs Estimates" page.
-// Fixes crash by:
-// 1) Replacing Next.js <Image> with a SafeImg wrapper using a data-URL fallback.
-// 2) Avoiding non-ASCII pitfalls by separating ASCII keys from display labels (Turkey vs Türkiye).
-// 3) Adding lightweight runtime checks ("tests") to catch shape/constraints issues in dev.
-
 import { useMemo, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-// ---- Safe image wrapper (no next/image) ----
 function SafeImg({ src, alt, className }: { src?: string; alt: string; className?: string }) {
   const fallback =
     'data:image/svg+xml;utf8,' +
@@ -18,7 +11,6 @@ function SafeImg({ src, alt, className }: { src?: string; alt: string; className
     );
   const resolved = useMemo(() => (src && typeof src === 'string' ? src : fallback), [src, fallback]);
   return (
-    // eslint-disable-next-line @next/next/no-img-element
     <img
       src={resolved}
       alt={alt}
@@ -31,12 +23,11 @@ function SafeImg({ src, alt, className }: { src?: string; alt: string; className
   );
 }
 
-// ASCII-safe key names + display labels
 type CountryRow = {
   key: 'india' | 'turkey' | 'mexico' | 'malaysia' | 'thailand';
-  label: string; // what we render (can contain non-ASCII like Türkiye)
-  flag: string; // image path; use your own assets
-  cost: number; // in base currency units
+  label: string;
+  flag: string;
+  cost: number;
 };
 
 export default function Compare() {
@@ -45,35 +36,23 @@ export default function Compare() {
 
   const rows: CountryRow[] = [
     { key: 'india', label: 'India', flag: '/India.png', cost: 3000 },
-    { key: 'turkey', label: 'Türkiye', flag: '/Turkey.png', cost: 4000 }, // display label keeps diacritics
+    { key: 'turkey', label: 'Türkiye', flag: '/Turkey.png', cost: 4000 },
     { key: 'mexico', label: 'Mexico', flag: '/Mexico.png', cost: 4000 },
     { key: 'malaysia', label: 'Malaysia', flag: '/Malaysia.png', cost: 9000 },
     { key: 'thailand', label: 'Thailand', flag: '/Thailand.png', cost: 3000 },
   ];
 
-  // --- lightweight dev tests (won't affect production) ---
-  if (process.env.NODE_ENV !== 'production') {
-    console.assert(rows.length === 5, 'Expected 5 country rows');
-    console.assert(rows.every((r) => r.label && r.cost > 0), 'Each row must have label and positive cost');
-    const max = Math.max(...rows.map((r) => r.cost));
-    console.assert(max === 9000, 'Max sample cost should be 9000 to match bar scaling');
-  }
-
-  // Simple currency symbol mapping (display only)
   const symbol = currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '₹';
-
-  // Normalize to longest bar
   const maxCost = Math.max(...rows.map((r) => r.cost));
 
   return (
     <section className="bg-gradient-to-b from-white to-[#F6FBFF] py-20 px-6 md:px-24">
-      {/* Header */}
       <div className="mb-10">
         <h4 className="text-green-700 font-medium text-lg mb-2">Price comparison section:</h4>
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
-          Compare Your <span className="text-blue-600">Surgical Costs Estimates</span>
+          Compare Your <span className="text-[#1073B9]">Surgical Costs Estimates</span>
         </h2>
-        <p className="text-gray-600 text-sm mt-3 max-w-3xl">
+        <p className="text-[#52575C] font-regular mt-3">
           Surgery costs vary in each county. Select your medical procedure and see which country offers the best pricing:
         </p>
       </div>
@@ -86,7 +65,7 @@ export default function Compare() {
             <select
               value={procedure}
               onChange={(e) => setProcedure(e.target.value)}
-              className="appearance-none border-2 border-blue-400 rounded-xl py-3 px-6 pr-10 text-lg font-medium text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm"
+              className="appearance-none border-2 border-blue-400 rounded-xl py-3 px-6 pr-10 text-lg font-bold text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm"
             >
               <option>Tummy Tuck</option>
               <option>Heart Surgery</option>
@@ -112,9 +91,9 @@ export default function Compare() {
       </div>
 
       {/* Bars */}
-      <div className="max-w-5xl space-y-5">
+      <div className="max-w-5xl space-y-6">
         {rows.map((row) => {
-          const pct = Math.max(8, Math.round((row.cost / maxCost) * 100)); // min width for visibility
+          const pct = Math.max(8, Math.round((row.cost / maxCost) * 100));
           return (
             <div key={row.key} className="flex items-center gap-4">
               <div className="flex items-center gap-3 w-40 shrink-0">
@@ -122,14 +101,16 @@ export default function Compare() {
                 <span className="text-gray-800 font-medium text-base">{row.label}</span>
               </div>
 
-              <div className="flex-1">
+              {/* ✅ Bar with text inside (left aligned) */}
+              <div className="flex-1 relative">
                 <div
-                  className="h-8 rounded-full bg-emerald-500 shadow-sm flex items-center justify-end pr-3 text-white font-semibold"
+                  className="h-8 rounded-full bg-[#2FAF83] shadow-sm flex items-center pl-4 text-white font-semibold text-sm"
                   style={{ width: `${pct}%` }}
                   aria-label={`${row.label} ${row.cost} ${currency}`}
                 >
-                  {row.cost.toLocaleString()} {currency === 'USD' || currency === 'EUR' ? currency : symbol + ' '}
-                  {currency === 'USD' || currency === 'EUR' ? '' : ''}
+                  {/* ✅ Value inside the bar (left side) */}
+                  {symbol}
+                  {row.cost.toLocaleString()} {currency === 'USD' || currency === 'EUR' ? currency : ''}
                 </div>
               </div>
             </div>
@@ -139,7 +120,7 @@ export default function Compare() {
 
       {/* CTA */}
       <div className="mt-12">
-        <button className="bg-blue-600 hover:bg-blue-700 transition text-white text-lg font-semibold py-3 px-8 rounded-xl shadow-md inline-flex items-center gap-2">
+        <button className="bg-[#1073B9] hover:bg-blue-500 transition text-white text-lg font-semibold py-3 px-8 rounded-xl shadow-md inline-flex items-center gap-2">
           Start My Consultation <span aria-hidden>→</span>
         </button>
       </div>
