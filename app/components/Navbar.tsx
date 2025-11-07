@@ -90,15 +90,13 @@ export default function Navbar() {
                     className="flex items-center gap-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <Image
-                      src="/logo.svg"
-                      alt="Global Health Opulence"
-                      width={32}
-                      height={32}
-                    />
-                    <span className="font-bold text-sm text-[#002147] leading-tight">
-                      GLOBAL HEALTH <br /> OPULENCE
-                    </span>
+                     <Image
+                    src="/logo.png"
+                    alt="Global Health Opulence"
+                    width={100}
+                    height={100}
+                  />
+                    
                   </Link>
                 </div>
 

@@ -19,37 +19,37 @@ export default function Footer() {
 
         {/* Support */}
         <div className="md:w-full">
-          <h4 className="text-green-400 font-semibold text-lg mb-5">Support</h4>
+          <h4 className="text-[#2FAF83] font-semibold text-lg mb-5">Support</h4>
           <ul className="space-y-3 text-base text-gray-300">
-            <li><a href="#" className="hover:text-green-400 transition">Getting Started</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">FAQS</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Help Articles</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Report an issue</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Contact Help Desk</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Getting Started</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">FAQS</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Help Articles</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Report an issue</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Contact Help Desk</a></li>
           </ul>
         </div>
 
         {/* Services */}
         <div className="md:w-full">
-          <h4 className="text-green-400 font-semibold text-lg mb-5">Services</h4>
+          <h4 className="text-[#2FAF83] font-semibold text-lg mb-5">Services</h4>
           <ul className="space-y-3 text-base text-gray-300">
-            <li><a href="#" className="hover:text-green-400 transition">Booking appointments</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Online consultations</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Prescriptions</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Medicine Refills</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Medical Notes</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Booking appointments</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Online consultations</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Prescriptions</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Medicine Refills</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Medical Notes</a></li>
           </ul>
         </div>
 
         {/* Legal */}
         <div className="md:w-full">
-          <h4 className="text-green-400 font-semibold text-lg mb-5">Legal</h4>
+          <h4 className="text-[#2FAF83] font-semibold text-lg mb-5">Legal</h4>
           <ul className="space-y-3 text-base text-gray-300">
-            <li><a href="#" className="hover:text-green-400 transition">Terms & Conditions</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Cookie Notice</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Cookie Preferences</a></li>
-            <li><a href="#" className="hover:text-green-400 transition">Trust Center</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Terms & Conditions</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Privacy Policy</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Cookie Notice</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Cookie Preferences</a></li>
+            <li><a href="#" className="hover:text-[#2FAF83] transition">Trust Center</a></li>
           </ul>
         </div>
       </div>

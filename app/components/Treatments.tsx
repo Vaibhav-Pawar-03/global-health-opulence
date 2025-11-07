@@ -2,8 +2,34 @@
 
 import Image from "next/image";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 export default function Treatments() {
+  const cards = [
+    {
+      title: "Cosmetic & Elective Procedures",
+      img: "/Cosmetic.png",
+    },
+    {
+      title: "Oncology (Cancer Care)",
+      img: "/Oncology.png",
+    },
+    {
+      title: "Orthopaedics",
+      img: "/Ortho.png",
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev === cards.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <section className="relative bg-gradient-to-b from-white to-[#F6FBFA] py-16 md:py-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-10">
@@ -21,68 +47,49 @@ export default function Treatments() {
           </p>
         </div>
 
-        {/* Treatment Cards */}
+        {/* ✅ Cards — All visible at once */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
-          {/* Card 1 */}
-          <div className="relative overflow-hidden rounded-[20px] shadow-lg group cursor-pointer">
-            <Image
-              src="/Cosmetic.png"
-              alt="Cosmetic & Elective Procedures"
-              width={400}
-              height={450}
-              className="w-full h-[450px] object-cover rounded-[20px] group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-[20px]" />
-            <div className="absolute bottom-6 left-0 w-full text-left px-6 text-white">
-              <h3 className="text-lg font-semibold mb-3">
-                Cosmetic & Elective Procedures
-              </h3>
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white px-5 py-2 rounded-md font-semibold flex items-center gap-2">
-                Learn More <ArrowRight size={16} />
-              </button>
-            </div>
-          </div>
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className={`relative overflow-hidden rounded-[20px] shadow-lg group cursor-pointer transition-transform duration-500 ${
+                activeIndex === index ? "scale-105" : "scale-100"
+              }`}
+            >
+              <div
+                className={`relative w-full h-[450px] rounded-[20px] transition-transform duration-500 ${
+                  activeIndex === index ? "scale-105" : "group-hover:scale-105"
+                }`}
+              >
+                <Image
+                  src={card.img}
+                  alt={card.title}
+                  fill
+                  className="object-cover rounded-[20px] transition-transform duration-500"
+                />
+              </div>
 
-          {/* Card 2 */}
-          <div className="relative overflow-hidden rounded-[20px] shadow-lg group cursor-pointer">
-            <Image
-              src="/Oncology.png"
-              alt="Oncology (Cancer Care)"
-              width={400}
-              height={450}
-              className="w-full h-[450px] object-cover rounded-[20px] group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-[20px]" />
-            <div className="absolute bottom-6 left-0 w-full text-left px-6 text-white">
-              <h3 className="text-lg font-semibold mb-3">
-                Oncology (Cancer Care)
-              </h3>
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white px-5 py-2 rounded-md font-semibold flex items-center gap-2">
-                Learn More <ArrowRight size={16} />
-              </button>
-            </div>
-          </div>
+              {/* Dark Overlay */}
+              <div
+                className={`absolute inset-0 rounded-[20px] transition-all duration-500 ${
+                  activeIndex === index
+                    ? "bg-gradient-to-t from-black/50 to-transparent"
+                    : "bg-gradient-to-t from-black/70 to-transparent"
+                }`}
+              />
 
-          {/* Card 3 */}
-          <div className="relative overflow-hidden rounded-[20px] shadow-lg group cursor-pointer">
-            <Image
-              src="/Ortho.png"
-              alt="Orthopaedics"
-              width={400}
-              height={450}
-              className="w-full h-[450px] object-cover rounded-[20px] group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-[20px]" />
-            <div className="absolute bottom-6 left-0 w-full text-left px-6 text-white">
-              <h3 className="text-lg font-semibold mb-3">Orthopaedics</h3>
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white px-5 py-2 rounded-md font-semibold flex items-center gap-2">
-                Learn More <ArrowRight size={16} />
-              </button>
+              {/* Text and Button */}
+              <div className="absolute bottom-6 left-0 w-full text-left px-6 text-white">
+                <h3 className="text-lg font-semibold mb-3">{card.title}</h3>
+                <button className="bg-[#28a745] hover:bg-[#218838] text-white px-5 py-2 rounded-md font-semibold flex items-center gap-2">
+                  Learn More <ArrowRight size={16} />
+                </button>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
 
-        {/* ✅ Navigation Buttons - matching Figma specs for both */}
+        {/* ✅ Navigation Buttons */}
         <div
           className="flex justify-end items-center pt-8"
           style={{
@@ -95,6 +102,7 @@ export default function Treatments() {
         >
           {/* Left Button */}
           <button
+            onClick={handlePrev}
             style={{
               width: "96px",
               height: "64px",
@@ -111,8 +119,9 @@ export default function Treatments() {
             <ChevronLeft size={24} />
           </button>
 
-          {/* Right Button (same Figma properties) */}
+          {/* Right Button */}
           <button
+            onClick={handleNext}
             style={{
               width: "96px",
               height: "64px",
