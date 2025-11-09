@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm border-b">
-      <div className="mx-auto flex h-25 max-w-7xl items-center justify-between px-6">
+      <div className="mx-auto flex h-25 max-w-7xl items-center justify-between px-10">
         {/* Logo */}
         <Link href="/" className="flex items-center" prefetch={false}>
           <Image
@@ -93,8 +93,8 @@ export default function Navbar() {
                      <Image
                     src="/logo.png"
                     alt="Global Health Opulence"
-                    width={100}
-                    height={100}
+                    width={190}
+                    height={120}
                   />
                     
                   </Link>
