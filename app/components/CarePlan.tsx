@@ -6,7 +6,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function CarePlan() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#E6F2EF] to-[#DFF3EC] flex flex-col items-center py-10 md:py-16 px-4 md:px-6">
+    <div className="min-h-screen bg-linear-to-b from-[#E6F2EF] to-[#DFF3EC] flex flex-col items-center py-10 md:py-16 px-4 md:px-6">
       <div className="text-center max-w-3xl mb-10 px-2">
         <p className="text-[#007B5E] font-regular text-sm md:text-base">
           Select a Personalised Care Plan
@@ -24,7 +24,7 @@ export default function CarePlan() {
         {/* ✅ Centered Button */}
         <div className="flex justify-center mt-6">
           <Button
-            className="bg-[#1073B9] hover:bg-[#006b52] text-white text-base md:text-lg font-semibold flex items-center justify-center transition-all duration-300 w-[90%] md:w-[403px] h-[56px] md:h-[68px] rounded-[12px]"
+            className="bg-[#1073B9] hover:bg-[#006b52] text-white text-base md:text-lg font-semibold flex items-center justify-center transition-all duration-300 w-[90%] md:w-[403px] h-14 md:h-[68px] rounded-[12px]"
           >
             Speak with a GHO Advisor →
           </Button>
@@ -83,7 +83,7 @@ export default function CarePlan() {
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle2
-                    className="text-[#1BAF75] mt-[2px] flex-shrink-0"
+                    className="text-[#1BAF75] mt-0.5 shrink-0"
                     size={18}
                   />
                   <span>{item}</span>
@@ -113,8 +113,8 @@ export default function CarePlan() {
             <Image
               src="/Cstar.png"
               alt="Guest Favourite Badge"
-              width={90}
-              height={90}
+              width={120}
+              height={120}
               className="object-contain drop-shadow-xl"
             />
           </div>
@@ -163,7 +163,7 @@ export default function CarePlan() {
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <CheckCircle2
-                    className="text-[#1BAF75] mt-[6px] flex-shrink-0"
+                    className="text-[#1BAF75] mt-1.5 shrink-0"
                     size={18}
                   />
                   <span>{item}</span>

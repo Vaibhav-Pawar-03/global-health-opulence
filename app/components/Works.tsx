@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Works() {
   return (
-    <section className="relative bg-gradient-to-b from-white to-[#F8FBFF] py-16 md:py-24 px-6 overflow-hidden">
+    <section className="relative bg-linear-to-b from-white to-[#F8FBFF] py-16 md:py-24 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center space-y-10">
         {/* Section Heading */}
         <div className="space-y-3">
@@ -28,7 +28,7 @@ export default function Works() {
             }}
           >
             <Image
-              src="/Work2.1.png" // ✅ Replace with your actual image path
+              src="/Work2.1.png" 
               alt="How It Works Combined Image"
               fill
               className="object-contain"

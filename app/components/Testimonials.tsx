@@ -16,27 +16,27 @@ export default function TestimonialsCarousel() {
   ];
 
   const viewportRef = useRef<HTMLDivElement | null>(null);
-  const gapPx = 24; // corresponds to gap-6 (1.5rem = 24px). Adjust if you change gap.
+  const gapPx = 24;
   const [visibleCount, setVisibleCount] = useState<number>(2);
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [cardWidthPx, setCardWidthPx] = useState<number>(0);
 
-  // calculate visible count and card width on mount + resize
+ 
   useEffect(() => {
     const updateSizes = () => {
       const vw = viewportRef.current?.clientWidth ?? window.innerWidth;
       if (window.innerWidth < 768) {
         setVisibleCount(1);
-        // card width for mobile = full viewport width
+       
         const cw = Math.max(0, vw);
         setCardWidthPx(cw);
       } else {
         setVisibleCount(2);
-        // card width for desktop = (viewportWidth - gapBetweenCards) / 2
+        
         const cw = Math.max(0, Math.floor((vw - gapPx) / 2));
         setCardWidthPx(cw);
       }
-      // clamp activeIndex if needed
+     
       setActiveIndex((prev) => Math.min(prev, Math.max(0, testimonials.length - (window.innerWidth < 768 ? 1 : 2))));
     };
 
@@ -50,12 +50,12 @@ export default function TestimonialsCarousel() {
   const handlePrev = () => setActiveIndex((prev) => Math.max(prev - 1, 0));
   const handleNext = () => setActiveIndex((prev) => Math.min(prev + 1, maxIndex));
 
-  // computed track width in px (cards + gaps)
+  
   const trackWidthPx = testimonials.length * cardWidthPx + Math.max(0, testimonials.length - 1) * gapPx;
-  const translateX = -(activeIndex * (cardWidthPx + gapPx)); // px
+  const translateX = -(activeIndex * (cardWidthPx + gapPx)); 
 
   return (
-    <section className="relative bg-gradient-to-b from-white to-[#F6FBFF] py-20 px-6 md:px-24 overflow-hidden">
+    <section className="relative bg-linear-to-b from-white to-[#F6FBFF] py-20 px-6 md:px-24 overflow-hidden">
       {/* Header */}
       <div className="text-left mb-8">
         <h4 className="text-green-700 font-medium text-lg mb-2">Testimonials</h4>
@@ -82,7 +82,7 @@ export default function TestimonialsCarousel() {
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="flex-shrink-0 bg-white rounded-2xl shadow-md p-6 border border-gray-100"
+              className="shrink-0 bg-white rounded-2xl shadow-md p-6 border border-gray-100"
               style={{
                 width: `${cardWidthPx}px`,
                 boxSizing: "border-box",

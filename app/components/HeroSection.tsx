@@ -5,7 +5,7 @@ import { Star, StarHalf, Quote, Check, QuoteIcon } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-[#F8FBFF] to-white py-16 md:py-24 overflow-hidden">
+    <section className="relative bg-linear-to-br from-[#F8FBFF] to-white py-16 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
         {/* ---------- LEFT CONTENT ---------- */}
         <div className="flex-1 text-center md:text-left space-y-6">
@@ -46,7 +46,7 @@ export default function HeroSection() {
           </div>
 
           {/* Floating Card: Happy Customers */}
-          <div className="absolute top-10 right-[-20px] bg-white shadow-xl rounded-xl px-2 py-2 border w-[260px]">
+          <div className="absolute top-10 -right-5 bg-white shadow-xl rounded-xl px-2 py-2 border w-[260px]">
             {/* Top Row: Images + Number */}
             <div className="flex items-center justify-center gap-3 mb-2">
               {/* Customer Images */}
@@ -102,7 +102,7 @@ export default function HeroSection() {
           </div>
 
           {/* Floating Card: Easy Appointment Booking */}
-          <div className="absolute bottom-24 left-[-20px] bg-white shadow-lg rounded-xl px-4 py-2 border flex items-center gap-2">
+          <div className="absolute bottom-24 -left-5 bg-white shadow-lg rounded-xl px-4 py-2 border flex items-center gap-2">
             <Star className="text-[#006341]" size={18} />
             <p className="text-sm font-semibold text-[#006341]">
               Easy Appointment Booking

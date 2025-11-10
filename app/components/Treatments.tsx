@@ -20,7 +20,7 @@ export default function Treatments() {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Show 1 card on mobile, 3 on larger screens
+  
   const visibleCount =
     typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 3;
 
@@ -34,7 +34,7 @@ export default function Treatments() {
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-white to-[#F6FBFA] py-16 md:py-24 px-6 overflow-hidden">
+    <section className="relative bg-linear-to-b from-white to-[#F6FBFA] py-16 md:py-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-10">
         {/* Section Header */}
         <div className="space-y-3 text-left">
@@ -65,7 +65,7 @@ export default function Treatments() {
             {cards.map((card, index) => (
                 <div
                 key={index}
-                className="flex-shrink-0 relative overflow-hidden rounded-[20px] shadow-lg group cursor-pointer transition-transform duration-500"
+                className="shrink-0 relative overflow-hidden rounded-[20px] shadow-lg group cursor-pointer transition-transform duration-500"
                 style={{
                   flex:
                     visibleCount === 1
@@ -95,7 +95,7 @@ export default function Treatments() {
                 </div>
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-[20px]" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent rounded-[20px]" />
 
                 {/* Text + Button */}
                 <div className="absolute bottom-4 md:bottom-6 left-0 w-full text-left px-4 md:px-6 text-white">

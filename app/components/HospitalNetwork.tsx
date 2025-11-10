@@ -3,19 +3,19 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 
-// ✅ Import Inter fonts (Regular + SemiBold)
+
 const interRegular = Inter({
   subsets: ["latin"],
-  weight: ["400"], // Regular
+  weight: ["400"], 
 });
 
 const interSemiBold = Inter({
   subsets: ["latin"],
-  weight: ["600"], // SemiBold
+  weight: ["600"], 
 });
 
 export default function HospitalNetwork() {
-  // ✅ Exact logo data from your design specs
+  
   const logos = [
     { src: "/h1.png", width: 69.29, height: 74.11 },
     { src: "/h2.png", width: 66.68, height: 74.46 },
@@ -28,7 +28,7 @@ export default function HospitalNetwork() {
 
   return (
     <section
-      className={`${interRegular.className} bg-gradient-to-b from-white to-[#F7FBFD] py-16 md:py-24 text-center overflow-hidden`}
+      className={`${interRegular.className} bg-linear-to-b from-white to-[#F7FBFD] py-16 md:py-24 text-center overflow-hidden`}
     >
       <div className="max-w-6xl mx-auto px-6 space-y-8">
         {/* Small heading */}
@@ -67,7 +67,7 @@ export default function HospitalNetwork() {
           {[...logos, ...logos].map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 flex items-center justify-center"
+              className="shrink-0 flex items-center justify-center"
               style={{
                 width: `${logo.width}px`,
                 height: `${logo.height}px`,

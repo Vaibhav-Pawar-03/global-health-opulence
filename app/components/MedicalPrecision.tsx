@@ -4,15 +4,15 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useState } from "react";
 
-// ✅ Import Inter fonts
+
 const interRegular = Inter({
   subsets: ["latin"],
-  weight: ["400"], // Regular
+  weight: ["400"],
 });
 
 const interSemiBold = Inter({
   subsets: ["latin"],
-  weight: ["600"], // Semi Bold
+  weight: ["600"],
 });
 
 export default function MedicalPrecision() {
@@ -24,7 +24,7 @@ export default function MedicalPrecision() {
     { name: "South Korea", img: "/page2.5.png" },
   ];
 
-  // ✅ Track which image is “hovered” via button
+  
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {
@@ -38,7 +38,7 @@ export default function MedicalPrecision() {
   };
 
   return (
-    <section className="relative bg-[#E9F5F2] py-16 md:py-24 px-6 rounded-[32px] mx-4 md:mx-12 my-12 overflow-hidden">
+    <section className="relative bg-[#E9F5F2] py-16 md:py-24 px-6 rounded-4xl mx-4 md:mx-12 my-12 overflow-hidden">
       <div className="max-w-7xl mx-auto text-center space-y-10">
         {/* Section Heading */}
         <div className="space-y-3">
@@ -73,7 +73,7 @@ export default function MedicalPrecision() {
               className="flex flex-col items-center justify-center space-y-4"
             >
               <div
-                className={`relative w-[220px] h-[180px] md:w-[250px] md:h-[320px] overflow-hidden rounded-3xl shadow-xl transition-transform duration-300 ${
+                className={`relative w-[220px] h-[180px] md:w-[250px] md:h-80 overflow-hidden rounded-3xl shadow-xl transition-transform duration-300 ${
                   activeIndex === index ? "scale-105" : ""
                 } hover:scale-105`}
               >

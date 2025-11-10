@@ -27,7 +27,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white to-[#F6FBFF] py-20 px-6 md:px-24">
+    <section className="bg-linear-to-b from-white to-[#F6FBFF] py-20 px-6 md:px-24">
       <div className="grid md:grid-cols-2 gap-12 items-start">
         {/* ✅ Left Card */}
         <div className="bg-[#E8F5F0] rounded-2xl p-10 flex flex-col items-center text-center shadow-sm">

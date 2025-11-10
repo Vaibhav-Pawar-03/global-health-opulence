@@ -54,7 +54,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           {/* ✅ Enlarged Join Us button (Desktop only) */}
           <Button
-            className="hidden md:inline-flex bg-gradient-to-r from-[#28a745] to-[#20c997] text-white font-bold shadow-lg hover:shadow-xl transition-shadow"
+            className="hidden md:inline-flex bg-linear-to-r from-[#28a745] to-[#20c997] text-white font-bold shadow-lg hover:shadow-xl transition-shadow"
             style={{
               width: "130px",
               height: "56px",
@@ -118,7 +118,7 @@ export default function Navbar() {
                 {/* ✅ Enlarged Join Us button (Mobile) */}
                 <div className="mt-auto p-6">
                   <Button
-                    className="w-full bg-gradient-to-r from-[#28a745] to-[#20c997] text-white font-bold shadow-lg hover:shadow-xl transition-shadow"
+                    className="w-full bg-linear-to-r from-[#28a745] to-[#20c997] text-white font-bold shadow-lg hover:shadow-xl transition-shadow"
                     style={{
                       height: "56px",
                       borderRadius: "12px",
