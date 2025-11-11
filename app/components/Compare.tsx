@@ -2,6 +2,11 @@
 
 import { useMemo, useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { Inter } from "next/font/google";
+
+const body1 = Inter({
+  weight: ["400"],
+});
 
 function SafeImg({
   src,
@@ -109,7 +114,7 @@ export default function Compare() {
           Compare Your{" "}
           <span className="text-[#1073B9]">Surgical Costs Estimates</span>
         </h2>
-        <p className="text-[#52575C] font-regular mt-3 text-sm md:text-base max-w-xl mx-auto md:mx-0">
+        <p className={`${body1.className} text-[#52575C] mt-3 text-[18px] max-w-xl mx-auto md:mx-0`}>
           Surgery costs vary in each country. Select your medical procedure and
           see which country offers the best pricing:
         </p>
