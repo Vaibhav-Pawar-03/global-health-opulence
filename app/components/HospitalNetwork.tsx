@@ -3,19 +3,21 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 
-
 const interRegular = Inter({
   subsets: ["latin"],
-  weight: ["400"], 
+  weight: ["400"],
 });
 
 const interSemiBold = Inter({
   subsets: ["latin"],
-  weight: ["600"], 
+  weight: ["600"],
+});
+
+const body1 = Inter({
+  weight: ["400"],
 });
 
 export default function HospitalNetwork() {
-  
   const logos = [
     { src: "/h1.png", width: 69.29, height: 74.11 },
     { src: "/h2.png", width: 66.68, height: 74.46 },
@@ -28,24 +30,19 @@ export default function HospitalNetwork() {
 
   return (
     <section
-      className={`${interRegular.className} bg-linear-to-b from-white to-[#F7FBFD] py-16 md:py-24 text-center overflow-hidden`}
+      className={`${interRegular.className} bg-white py-16 md:py-24 text-center overflow-hidden`}
     >
       <div className="max-w-6xl mx-auto px-6 space-y-8">
-        {/* Small heading */}
-        <p className="text-sm md:text-base font-regular text-[#006341]">
-          Hospital Highlights
-        </p>
-
         {/* Main heading */}
         <h2 className="text-3xl md:text-4xl font-semibold text-[#002147]">
-          Access The World’s{" "}
+          Access The World's{" "}
           <span className="text-[#1073B9] font-semibold">
             Premier Healthcare Network
           </span>
         </h2>
 
         {/* Description */}
-        <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        <p className={`${body1.className} text-gray-600 max-w-4xl mx-auto leading-relaxed text-[18px]`}>
           Our hospital partners set the standard in global healthcare,
           offering precise, expert-led treatment within thoughtfully designed,
           state-of-the-art facilities for an experience defined by excellence
@@ -53,48 +50,78 @@ export default function HospitalNetwork() {
         </p>
       </div>
 
-      {/* ✅ Full-Width Auto-Rotating Ribbon */}
-      <div className="relative mt-14 w-full overflow-hidden flex justify-center">
-        <div
-          className="flex animate-scroll-slow items-center justify-center"
-          style={{
-            width: "1376.41px",
-            height: "75px",
-            gap: "60px",
-            opacity: 1,
-          }}
-        >
-          {[...logos, ...logos].map((logo, index) => (
+      {/* Full-Width Auto-Rotating Ribbon */}
+      <div className="relative mt-14 w-full overflow-hidden">
+        <div className="flex animate-scroll-slow">
+          {/* First set of logos */}
+          {logos.map((logo, index) => (
             <div
-              key={index}
-              className="shrink-0 flex items-center justify-center"
+              key={`logo-1-${index}`}
+              className="shrink-0 flex items-center justify-center mx-[30px]"
               style={{
                 width: `${logo.width}px`,
-                height: `${logo.height}px`,
-                opacity: 1,
+                height: "75px",
               }}
             >
               <Image
                 src={logo.src}
-                alt={`Hospital Logo ${index + 1}`}
+                alt={`Hospital Logo ${(index % logos.length) + 1}`}
                 width={logo.width}
                 height={logo.height}
                 className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
-                priority
+                priority={index < 3}
+              />
+            </div>
+          ))}
+          {/* Second set of logos for seamless loop */}
+          {logos.map((logo, index) => (
+            <div
+              key={`logo-2-${index}`}
+              className="shrink-0 flex items-center justify-center mx-[30px]"
+              style={{
+                width: `${logo.width}px`,
+                height: "75px",
+              }}
+            >
+              <Image
+                src={logo.src}
+                alt={`Hospital Logo ${(index % logos.length) + 1}`}
+                width={logo.width}
+                height={logo.height}
+                className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
+          ))}
+          {/* Third set of logos for extra smoothness on larger screens */}
+          {logos.map((logo, index) => (
+            <div
+              key={`logo-3-${index}`}
+              className="shrink-0 flex items-center justify-center mx-[30px]"
+              style={{
+                width: `${logo.width}px`,
+                height: "75px",
+              }}
+            >
+              <Image
+                src={logo.src}
+                alt={`Hospital Logo ${(index % logos.length) + 1}`}
+                width={logo.width}
+                height={logo.height}
+                className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
           ))}
         </div>
       </div>
 
-      {/* ✅ Animation Keyframes */}
+      {/* Animation Keyframes */}
       <style jsx>{`
         @keyframes scroll-slow {
           0% {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(calc(-100% / 3));
           }
         }
         .animate-scroll-slow {

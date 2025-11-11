@@ -8,9 +8,6 @@ export default function Works() {
       <div className="max-w-6xl mx-auto text-center space-y-10">
         {/* Section Heading */}
         <div className="space-y-3">
-          <p className="text-sm md:text-base text-[#007B55] font-regular tracking-wide">
-            Patient Journey
-          </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-[#25282B]">
             How It Works
           </h2>

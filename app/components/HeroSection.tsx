@@ -2,6 +2,11 @@
 
 import Image from "next/image";
 import { Star, StarHalf, Quote, Check, QuoteIcon } from "lucide-react";
+import { Inter } from "next/font/google";
+
+const body1 = Inter({
+  weight: ["400"],
+});
 
 export default function HeroSection() {
   return (
@@ -14,7 +19,7 @@ export default function HeroSection() {
             <span className="text-[#1073B9]">Opulent Experience</span>
           </h1>
 
-          <p className="text-gray-600 text-lg max-w-md mx-auto md:mx-0">
+          <p className={`${body1.className} text-gray-600 text-[18px] max-w-md mx-auto md:mx-0`}>
             Premium medical care abroad, curated with precision. We assist you
             with expert procedures for opulence rejuvenation!
           </p>

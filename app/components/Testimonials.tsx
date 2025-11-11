@@ -2,6 +2,11 @@
 
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Inter } from "next/font/google";
+
+const body1 = Inter({
+  weight: ["400"],
+});
 
 export default function TestimonialsCarousel() {
   const testimonials = [
@@ -58,12 +63,11 @@ export default function TestimonialsCarousel() {
     <section className="relative bg-linear-to-b from-white to-[#F6FBFF] py-20 px-6 md:px-24 overflow-hidden">
       {/* Header */}
       <div className="text-left mb-8">
-        <h4 className="text-green-700 font-medium text-lg mb-2">Testimonials</h4>
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
           What Our <span className="text-[#1073B9]">Clients Say</span>
         </h2>
-        <p className="text-gray-600 font-regular mt-3 max-w-3xl">
-          Your medical tour is a precious recovery journey — here’s what clients shared:
+        <p className={`${body1.className} text-gray-600 mt-3 max-w-3xl text-[18px]`}>
+          Your medical tour is a precious recovery journey — here's what clients shared:
         </p>
       </div>
 

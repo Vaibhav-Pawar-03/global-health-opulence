@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 const interRegular = Inter({
@@ -15,6 +15,10 @@ const interSemiBold = Inter({
   weight: ["600"],
 });
 
+const body1 = Inter({
+  weight: ["400"],
+});
+
 export default function MedicalPrecision() {
   const countries = [
     { name: "Turkey", img: "/page2.1.png" },
@@ -22,30 +26,49 @@ export default function MedicalPrecision() {
     { name: "India", img: "/page2.3.png" },
     { name: "Singapore", img: "/page2.4.png" },
     { name: "South Korea", img: "/page2.5.png" },
+    { name: "Thailand", img: "/page2.1.png" },
+    { name: "Malaysia", img: "/page2.2.png" },
+    { name: "Mexico", img: "/page2.3.png" },
+    { name: "Brazil", img: "/page2.4.png" },
+    { name: "Spain", img: "/page2.5.png" },
   ];
 
-  
-  const [activeIndex, setActiveIndex] = useState(0);
+  // Create infinite loop by triplicating countries
+  const extendedCountries = [...countries, ...countries, ...countries];
+
+  const [activeIndex, setActiveIndex] = useState(countries.length); // Start at middle set
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % countries.length);
+    setIsTransitioning(true);
+    setActiveIndex((prev) => prev + 1);
   };
 
   const handlePrev = () => {
-    setActiveIndex((prev) =>
-      prev === 0 ? countries.length - 1 : prev - 1
-    );
+    setIsTransitioning(true);
+    setActiveIndex((prev) => prev - 1);
   };
+
+  // Reset position when reaching clones for infinite effect
+  useEffect(() => {
+    if (activeIndex >= countries.length * 2) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setActiveIndex(countries.length);
+      }, 500);
+    } else if (activeIndex < countries.length) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setActiveIndex(countries.length * 2 - 1);
+      }, 500);
+    }
+  }, [activeIndex, countries.length]);
 
   return (
     <section className="relative bg-[#E9F5F2] py-16 md:py-24 px-6 rounded-4xl mx-4 md:mx-12 my-12 overflow-hidden">
       <div className="max-w-7xl mx-auto text-center space-y-10">
         {/* Section Heading */}
         <div className="space-y-3">
-          <p className="text-sm md:text-base text-[#1073B9] font-regular tracking-wide">
-            Global Destinations
-          </p>
-
           <h2
             className={`${interRegular.className} text-3xl md:text-4xl font-normal text-[#002147]`}
           >
@@ -57,7 +80,7 @@ export default function MedicalPrecision() {
             </span>
           </h2>
 
-          <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className={`${body1.className} text-gray-600 max-w-4xl mx-auto leading-relaxed text-[18px]`}>
             Each facility meets rigorous international standards for surgical
             excellence, patient safety, and post-operative care. These aren't
             budget clinics. They're premium institutions serving global
@@ -65,33 +88,38 @@ export default function MedicalPrecision() {
           </p>
         </div>
 
-        {/* ✅ Country Image Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-40 justify-center items-center pt-4">
-          {countries.map((country, index) => (
-            <div
-              key={country.name}
-              className="flex flex-col items-center justify-center space-y-4"
-            >
+        {/* ✅ Country Carousel */}
+        <div className="overflow-hidden pt-4">
+          <div
+            className={`flex gap-40 justify-center items-center ${
+              isTransitioning ? "transition-transform duration-500 ease-in-out" : ""
+            }`}
+            style={{
+              transform: `translateX(-${activeIndex * (250 + 160)}px)`,
+            }}
+          >
+            {extendedCountries.map((country, index) => (
               <div
-                className={`relative w-[220px] h-[180px] md:w-[250px] md:h-80 overflow-hidden rounded-3xl shadow-xl transition-transform duration-300 ${
-                  activeIndex === index ? "scale-105" : ""
-                } hover:scale-105`}
+                key={`${country.name}-${index}`}
+                className="flex flex-col items-center justify-center space-y-4 flex-shrink-0"
               >
-                <Image
-                  src={country.img}
-                  alt={country.name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 240px"
-                />
+                <div className="relative w-[220px] h-[180px] md:w-[250px] md:h-80 overflow-hidden rounded-3xl shadow-xl transition-transform duration-300 hover:scale-105">
+                  <Image
+                    src={country.img}
+                    alt={country.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 240px"
+                  />
+                </div>
+                <p
+                  className={`${interSemiBold.className} text-[#002147] text-lg md:text-xl font-semibold`}
+                >
+                  {country.name}
+                </p>
               </div>
-              <p
-                className={`${interSemiBold.className} text-[#002147] text-lg md:text-xl font-semibold`}
-              >
-                {country.name}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Navigation Buttons */}

@@ -3,20 +3,22 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react";
+import { Inter } from "next/font/google";
+
+const body1 = Inter({
+  weight: ["400"],
+});
 
 export default function CarePlan() {
   return (
     <div className="min-h-screen bg-linear-to-b from-[#E6F2EF] to-[#DFF3EC] flex flex-col items-center py-10 md:py-16 px-4 md:px-6">
       <div className="text-center max-w-3xl mb-10 px-2">
-        <p className="text-[#007B5E] font-regular text-sm md:text-base">
-          Select a Personalised Care Plan
-        </p>
-        <h1 className="text-2xl md:text-4xl font-semibold mt-3 leading-tight">
+        <h1 className="text-2xl md:text-4xl font-semibold leading-tight">
           Your Treatment. Your Timeline.
           <br />
           Your Perfect Destination.
         </h1>
-        <p className="text-gray-600 mt-4 text-sm md:text-base px-2 md:px-0">
+        <p className={`${body1.className} text-gray-600 mt-4 text-[18px] px-2 md:px-0`}>
           Design your ideal treatment journey with complete flexibility or reach
           out for expert guidance.
         </p>

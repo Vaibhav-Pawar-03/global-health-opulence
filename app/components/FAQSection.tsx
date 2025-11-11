@@ -56,25 +56,33 @@ export default function FAQSection() {
             <div key={i} className="border-b border-gray-200 pb-4">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
-                className="w-full flex justify-between items-center text-left focus:outline-none"
+                className="w-full flex justify-between items-center text-left focus:outline-none hover:text-[#1073B9] transition-colors duration-200 group"
               >
                 {/* ✅ Question (font-semibold) */}
                 <span className="font-semibold text-gray-700 text-base md:text-lg">
                   {faq.question}
                 </span>
-                {openIndex === i ? (
-                  <Minus className="text-gray-500" size={20} />
-                ) : (
-                  <Plus className="text-gray-500" size={20} />
-                )}
+                <div className="transition-transform duration-300">
+                  {openIndex === i ? (
+                    <Minus className="text-gray-500 group-hover:text-[#1073B9] transition-all duration-300" size={20} />
+                  ) : (
+                    <Plus className="text-gray-500 group-hover:text-[#1073B9] transition-all duration-300" size={20} />
+                  )}
+                </div>
               </button>
 
-              {/* ✅ Answer (font-regular) */}
-              {openIndex === i && faq.answer && (
-                <p className="font-regular text-gray-500 mt-3 text-medium leading-relaxed">
-                  {faq.answer}
-                </p>
-              )}
+              {/* ✅ Answer (font-regular) with smooth animation */}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  openIndex === i ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                {faq.answer && (
+                  <p className="font-regular text-gray-500 mt-3 text-medium leading-relaxed">
+                    {faq.answer}
+                  </p>
+                )}
+              </div>
             </div>
           ))}
         </div>
