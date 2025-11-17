@@ -1,0 +1,88 @@
+"use client";
+
+import React, { FC, useState, useEffect } from "react";
+
+
+export interface WhyChooseBrazilProps {
+  title?: string;
+  description?: string;
+  imageSrc?: string;
+  imgAlt?: string;
+}
+
+
+const WhyChooseBrazil: FC<WhyChooseBrazilProps> = ({
+  title = "Why Choose Brazil With Global Health Opulence",
+  description =
+    "Through Global Health Opulence, your Brazil healthcare travel experience is designed around trust, precision, and comfort. From expert consultation to travel logistics, every stage is managed by a dedicated coordination team. Our partner hospitals maintain international accreditations and offer bilingual medical staff, private suites, and personalised care for international patients.",
+  imageSrc = "/Doctor.png",
+  imgAlt = "Doctor",
+}) => {
+  const safeTitle: string = typeof title === "string" ? title : String(title ?? "");
+  const safeDescription: string =
+    typeof description === "string" ? description : String(description ?? "");
+  const safeAlt: string = typeof imgAlt === "string" ? imgAlt : "image";
+
+  
+  const validImageSrc: string =
+    typeof imageSrc === "string" && imageSrc.length > 0 ? imageSrc : "/doctor.png";
+
+  const [src, setSrc] = useState<string>(validImageSrc);
+
+  useEffect(() => {
+    setSrc(validImageSrc);
+  }, [validImageSrc]);
+
+  const handleImgError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const fallback = "/Doctor.png";
+    const target = e.currentTarget;
+
+    if (!target.src.includes(fallback)) {
+      target.src = fallback;
+    }
+  };
+
+  return (
+    <section className="w-full flex justify-center py-20 bg-white">
+      <div
+        className="w-[92%] max-w-5xl flex items-center rounded-2xl  overflow-hidden p-6 md:p-10 bg-[#43e9d0]"
+        role="region"
+        aria-label={safeTitle}
+      >
+        {/* LEFT — Image */}
+        <div className="w-28 md:w-40 lg:w-48 shrink-0 flex items-center justify-center">
+          <img
+            src={src}
+            alt={safeAlt}
+            width={300}
+            height={300}
+            onError={handleImgError}
+            className="object-contain rounded-lg max-h-[150px] md:max-h-[200px] lg:max-h-60"
+          />
+        </div>
+
+        {/* RIGHT — Content */}
+        <div className="ml-4 md:ml-8 flex-1">
+          <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-6 md:mb-4 ">
+            {safeTitle}
+          </h2>
+
+          <p className="text-gray-700 leading-relaxed mb-4 text-sm md:text-base">
+            {safeDescription}
+          </p>
+
+          <button
+            type="button"
+            className="inline-block px-5 py-2.5 bg-[#1073B9] text-white rounded-md text-sm font-semibold  hover:bg-blue-700 transition"
+            aria-label="Transform Confidence into Healing"
+            onClick={() => console.log("CTA clicked")}
+          >
+            Transform Confidence into Healing
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default WhyChooseBrazil;

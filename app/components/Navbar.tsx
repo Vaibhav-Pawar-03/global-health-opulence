@@ -8,12 +8,13 @@ import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const navLinks = [
+
+  { href: "/destinations", label: "Destinations" },
   { href: "/services", label: "Services" },
-  { href: "#", label: "Find Doctors" },
   { href: "#", label: "About us" },
   { href: "#", label: "Blog" },
-  { href: "#", label: "Contact us" },
 ];
+
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,11 +48,11 @@ export default function Navbar() {
 
         {/* Buttons + Mobile Menu */}
         <div className="flex items-center gap-4">
-          {/* ✅ Enlarged Join Us button (Desktop only) */}
+          {/* ✅ Enlarged Contact Us button (Desktop only) */}
           <Button
             className="hidden md:inline-flex bg-linear-to-r from-[#28a745] to-[#20c997] text-white font-bold shadow-lg hover:shadow-xl transition-shadow"
             style={{
-              width: "130px",
+              width: "150px",
               height: "56px",
               borderRadius: "12px",
               opacity: 1,
@@ -64,7 +65,7 @@ export default function Navbar() {
               fontSize: "1rem",
             }}
           >
-            Join us
+            Contact us
           </Button>
 
           {/* Mobile Menu Sheet */}
@@ -110,7 +111,7 @@ export default function Navbar() {
                   ))}
                 </nav>
 
-                {/* ✅ Enlarged Join Us button (Mobile) */}
+                {/* ✅ Enlarged Contact us+ button (Mobile) */}
                 <div className="mt-auto p-6">
                   <Button
                     className="w-full bg-linear-to-r from-[#28a745] to-[#20c997] text-white font-bold shadow-lg hover:shadow-xl transition-shadow"
@@ -126,7 +127,7 @@ export default function Navbar() {
                       fontSize: "1rem",
                     }}
                   >
-                    Join us
+                    Contact us
                   </Button>
                 </div>
               </div>
