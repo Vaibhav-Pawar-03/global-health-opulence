@@ -49,7 +49,7 @@ const WhyChooseBrazil: FC<WhyChooseBrazilProps> = ({
   return (
     <section className="w-full px-6 md:px-24 py-20 bg-white">
       <div
-        className="max-w-5xl mx-auto flex items-center rounded-2xl overflow-hidden p-6 md:p-10 bg-[#43e9d0]"
+        className="max-w-5xl mx-auto flex items-center rounded-2xl overflow-hidden p-6 md:p-10 bg-[#DBF0FF]"
         role="region"
         aria-label={safeTitle}
       >

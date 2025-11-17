@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
@@ -18,6 +19,14 @@ const navLinks = [
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Check if a nav link is active
+  const isActive = (href: string) => {
+    if (href === "#") return false;
+    // Exact match or starts with the path (for nested routes like /destinations/Brazil)
+    return pathname === href || pathname.startsWith(href + "/");
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm border-b">
@@ -38,7 +47,11 @@ export default function Navbar() {
             <Link
               key={link.href + link.label}
               href={link.href}
-              className="text-slate-600 hover:text-[#1073B9] transition-colors"
+              className={`transition-colors ${
+                isActive(link.href)
+                  ? "text-[#1073B9] font-bold"
+                  : "text-slate-600 hover:text-[#1073B9]"
+              }`}
               prefetch={link.href.startsWith("/")}
             >
               {link.label}
@@ -102,7 +115,11 @@ export default function Navbar() {
                     <Link
                       key={link.href + link.label}
                       href={link.href}
-                      className="transition-colors hover:text-[#007bff]"
+                      className={`transition-colors ${
+                        isActive(link.href)
+                          ? "text-[#1073B9] font-bold"
+                          : "hover:text-[#1073B9]"
+                      }`}
                       onClick={() => setIsMenuOpen(false)}
                       prefetch={link.href.startsWith("/")}
                     >
