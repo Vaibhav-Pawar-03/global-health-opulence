@@ -1,5 +1,10 @@
 "use client";
 import Image from "next/image";
+import { Inter } from "next/font/google";
+
+const body1 = Inter({
+  weight: ["400"],
+});
 
 const cards = [
   {
@@ -30,15 +35,13 @@ const cards = [
 
 export default function Experience() {
   return (
-    <section className="w-full bg-white py-16 px-6 md:px-24"> 
-      <div className="max-w-6xl mx-auto w-full"> 
-      
-        <h1 className="text-[40px] md:text-[36px] font-semibold mb-10 text-[#25282B]">
-          Beyond Treatment:{" "}
-          <span className="text-[#1073B9]">The Brazilian Experience</span>
-        </h1>
+    <section className="w-full bg-white py-16 px-6 md:px-24">
+      <h1 className="text-[40px] md:text-[36px] font-semibold mb-10 text-[#25282B]">
+        Beyond Treatment:{" "}
+        <span className="text-[#1073B9]">The Brazilian Experience</span>
+      </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {cards.map((card) => (
             <div
               key={card.title}
@@ -60,14 +63,12 @@ export default function Experience() {
                   {card.title}
                 </h3>
 
-                <p className="text-[15px] text-[#616161] leading-relaxed">
+                <p className={`${body1.className} text-[18px] text-[#616161] leading-relaxed`}>
                   {card.desc}
                 </p>
               </div>
             </div>
-          ))}
-        </div>
-
+        ))}
       </div>
     </section>
   );

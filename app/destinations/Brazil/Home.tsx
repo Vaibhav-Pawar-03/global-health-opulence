@@ -1,5 +1,10 @@
 "use client";
 import Image from "next/image";
+import { Inter } from "next/font/google";
+
+const body1 = Inter({
+  weight: ["400"],
+});
 
 export default function BrazilHero() {
   return (
@@ -20,7 +25,7 @@ export default function BrazilHero() {
       </div>
 
       {/* TEXT CONTENT */}
-      <div className="relative z-10 max-w-3xl px-6 sm:px-12 md:px-20 lg:px-28 space-y-6">
+      <div className="relative z-10 max-w-3xl px-6 md:px-24 space-y-6">
         
         <p className="text-[#1073B9] text-base md:text-lg font-medium">
           Brazil
@@ -31,11 +36,11 @@ export default function BrazilHero() {
           Meets <span className="text-[#1073B9]">Natural Vitality</span>
         </h1>
 
-        <p className="text-[16px] md:text-[18px] text-[#333333] leading-relaxed max-w-xl pt-3">
-          Patients seeking aesthetic enhancement, restorative care, or complex medical procedures 
-          find in medical tourism in Brazil a rare mix of medical precision, natural beauty, and 
-          post-care rejuvenation. With internationally accredited hospitals, advanced surgical 
-          technology, and highly skilled specialists, Brazil healthcare travel has become 
+        <p className={`${body1.className} text-[18px] text-[#333333] leading-relaxed max-w-xl pt-3`}>
+          Patients seeking aesthetic enhancement, restorative care, or complex medical procedures
+          find in medical tourism in Brazil a rare mix of medical precision, natural beauty, and
+          post-care rejuvenation. With internationally accredited hospitals, advanced surgical
+          technology, and highly skilled specialists, Brazil healthcare travel has become
           synonymous with quality, confidence, and remarkable patient outcomes.
         </p>
 

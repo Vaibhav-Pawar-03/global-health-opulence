@@ -2,6 +2,11 @@
 
 import Image from "next/image";
 import React from "react"; // Added React import for best practice
+import { Inter } from "next/font/google";
+
+const body1 = Inter({
+  weight: ["400"],
+});
 
 export default function Specialisations() {
   const items = [
@@ -46,7 +51,7 @@ export default function Specialisations() {
       </h2>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {items.map((item, i) => (
           <div
             key={i}
@@ -75,7 +80,7 @@ export default function Specialisations() {
                 {item.title}
               </h3>
 
-              <p className="text-[14px] md:text-[15px] text-gray-600 leading-relaxed">
+              <p className={`${body1.className} text-[18px] text-gray-600 leading-relaxed`}>
                 {item.desc}
               </p>
             </div>

@@ -1,7 +1,11 @@
 "use client";
 
 import React, { FC, useState, useEffect } from "react";
+import { Inter } from "next/font/google";
 
+const body1 = Inter({
+  weight: ["400"],
+});
 
 export interface WhyChooseBrazilProps {
   title?: string;
@@ -43,9 +47,9 @@ const WhyChooseBrazil: FC<WhyChooseBrazilProps> = ({
   };
 
   return (
-    <section className="w-full flex justify-center py-20 bg-white">
+    <section className="w-full px-6 md:px-24 py-20 bg-white">
       <div
-        className="w-[92%] max-w-5xl flex items-center rounded-2xl  overflow-hidden p-6 md:p-10 bg-[#43e9d0]"
+        className="max-w-5xl mx-auto flex items-center rounded-2xl overflow-hidden p-6 md:p-10 bg-[#43e9d0]"
         role="region"
         aria-label={safeTitle}
       >
@@ -67,7 +71,7 @@ const WhyChooseBrazil: FC<WhyChooseBrazilProps> = ({
             {safeTitle}
           </h2>
 
-          <p className="text-gray-700 leading-relaxed mb-4 text-sm md:text-base">
+          <p className={`${body1.className} text-[18px] text-gray-700 leading-relaxed mb-4`}>
             {safeDescription}
           </p>
 

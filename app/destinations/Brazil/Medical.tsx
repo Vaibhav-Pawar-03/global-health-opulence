@@ -3,6 +3,11 @@
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
+import { Inter } from "next/font/google";
+
+const body1 = Inter({
+  weight: ["400"],
+});
 
 export default function BrazilDestinations() {
   const cards = [
@@ -103,7 +108,7 @@ export default function BrazilDestinations() {
                 <h3 className="text-white text-[20px] font-semibold mb-2">
                   {card.title}
                 </h3>
-                <p className="text-white text-[14px] opacity-90 leading-relaxed mb-4">
+                <p className={`${body1.className} text-white text-[18px] opacity-90 leading-relaxed mb-4`}>
                   {card.desc}
                 </p>
               </div>
