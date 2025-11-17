@@ -8,7 +8,6 @@ import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const navLinks = [
-  { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "#", label: "Find Doctors" },
   { href: "#", label: "About us" },
@@ -34,15 +33,11 @@ export default function Navbar() {
 
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center gap-12 text-sm font-semibold">
-          {navLinks.map((link, index) => (
+          {navLinks.map((link) => (
             <Link
               key={link.href + link.label}
               href={link.href}
-              className={`transition-colors ${
-                index === 0
-                  ? "text-[#1073B9]"
-                  : "text-slate-600 hover:text-[#1073B9]"
-              }`}
+              className="text-slate-600 hover:text-[#1073B9] transition-colors"
               prefetch={link.href.startsWith("/")}
             >
               {link.label}
