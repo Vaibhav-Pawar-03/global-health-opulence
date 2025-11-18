@@ -23,19 +23,19 @@ const body1 = Inter({
 
 export default function MedicalPrecision() {
   const countries = [
-    { name: "Turkey", img: "/page2.1.png", slug: "turkey" },
-    { name: "Mexico", img: "/page2.3.png", slug: "mexico" },
-    { name: "Thailand", img: "/page2.1.png", slug: "thailand" },
-    { name: "Vietnam", img: "/page2.2.png", slug: "vietnam" },
-    { name: "Costa Rica", img: "/page2.3.png", slug: "costa-rica" },
-    { name: "UAE", img: "/page2.2.png", slug: "uae" },
-    { name: "India", img: "/page2.3.png", slug: "india" },
-    { name: "Brazil", img: "/page2.4.png", slug: "brazil" },
-    { name: "Germany", img: "/page2.5.png", slug: "germany" },
-    { name: "Malaysia", img: "/page2.2.png", slug: "malaysia" },
-    { name: "Singapore", img: "/page2.4.png", slug: "singapore" },
-    { name: "South Korea", img: "/page2.5.png", slug: "south-korea" },
-    { name: "Spain", img: "/page2.5.png", slug: "spain" },
+    { name: "Turkey", img: "/turkey-new.jpg", slug: "turkey" },
+    { name: "Mexico", img: "/mexico.jpg", slug: "mexico" },
+    { name: "Thailand", img: "/thailand-new.jpg", slug: "thailand" },
+    { name: "Vietnam", img: "/vietnam.jpg", slug: "vietnam" },
+    { name: "Costa Rica", img: "/costa-rica.jpg", slug: "costa-rica" },
+    { name: "UAE", img: "/uae.jpg", slug: "uae" },
+    { name: "India", img: "/india.jpg", slug: "india" },
+    { name: "Brazil", img: "/brazil.jpg", slug: "brazil" },
+    { name: "Germany", img: "/germany.jpg", slug: "germany" },
+    { name: "Malaysia", img: "/malaysia.jpg", slug: "malaysia" },
+    { name: "Singapore", img: "/singapore.jpg", slug: "singapore" },
+    { name: "South Korea", img: "/south-korea.jpg", slug: "south-korea" },
+    { name: "Spain", img: "/spain.jpg", slug: "spain" },
   ];
 
   const viewportRef = useRef<HTMLDivElement | null>(null);
