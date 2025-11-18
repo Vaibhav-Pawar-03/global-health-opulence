@@ -23,7 +23,7 @@ export default function IndiaDestinations() {
     },
     {
       title: "Chennai",
-      desc: "Known as the "Healthcare Capital of India," specialising in cardiac, transplant, and orthopaedic excellence.",
+      desc: "Known as the 'Healthcare Capital of India', specialising in cardiac, transplant, and orthopaedic excellence.",
       img: "/DM3.png",
     },
     {
