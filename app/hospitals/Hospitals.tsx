@@ -34,7 +34,7 @@ export default function Hospitals() {
   return (
     <section className="w-full bg-white py-8 md:py-12">
       {/* Main Heading */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-16 lg:px-24 mb-8">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-16 lg:px-24 mb-6">
         <p className="text-[#1073B9] text-sm md:text-base font-semibold mb-2 uppercase tracking-wide">Hospitals</p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#25282B] mb-6">
           Explore <span className="text-[#1073B9]">Top International Hospitals</span>

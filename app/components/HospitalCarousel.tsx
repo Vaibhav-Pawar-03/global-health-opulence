@@ -24,7 +24,8 @@ export default function HospitalCarousel({
 
   const scroll = (direction: string) => {
     if (scrollRef.current) {
-      const amount = 400;
+      // Responsive scroll amount based on viewport
+      const amount = window.innerWidth < 768 ? 300 : 400;
       scrollRef.current.scrollBy({
         left: direction === "left" ? -amount : amount,
         behavior: "smooth",
@@ -33,7 +34,7 @@ export default function HospitalCarousel({
   };
 
   return (
-    <section className="w-full px-6 md:px-16 lg:px-24 py-16 md:py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="w-full px-4 md:px-16 lg:px-24 py-12 md:py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-[1400px] mx-auto">
         {/* Heading */}
         <div className="mb-12">
@@ -60,14 +61,14 @@ export default function HospitalCarousel({
         <div className="relative">
           <div
             ref={scrollRef}
-            className="flex gap-6 md:gap-8 overflow-x-auto scroll-smooth hide-scrollbar pb-6"
+            className="flex gap-4 md:gap-8 overflow-x-auto scroll-smooth hide-scrollbar pb-6"
           >
             {hospitals.map((item, index) => (
               <div
                 key={index}
-                className="group min-w-[320px] md:min-w-[380px] bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 flex-shrink-0"
+                className="group min-w-[280px] md:min-w-[380px] bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 flex-shrink-0"
               >
-                <div className="w-full h-[240px] md:h-[260px] relative overflow-hidden rounded-t-2xl">
+                <div className="w-full h-[200px] md:h-[260px] relative overflow-hidden rounded-t-2xl">
                   <Image
                     src={item.img}
                     alt={item.title}
@@ -77,7 +78,7 @@ export default function HospitalCarousel({
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
-                <div className="p-6 md:p-7">
+                <div className="p-5 md:p-7">
                   <h3 className="font-bold text-xl text-[#25282B] leading-tight mb-3 line-clamp-2">
                     {item.title}
                   </h3>
