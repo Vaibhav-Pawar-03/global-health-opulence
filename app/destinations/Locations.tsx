@@ -8,14 +8,17 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export default function Locations() {
   const countries = [
     { name: "Turkey", img: "/page2.1.png", slug: "turkey" },
+    { name: "Mexico", img: "/page2.3.png", slug: "mexico" },
+    { name: "Thailand", img: "/page2.1.png", slug: "thailand" },
+    { name: "Vietnam", img: "/page2.2.png", slug: "vietnam" },
+    { name: "Costa Rica", img: "/page2.3.png", slug: "costa-rica" },
     { name: "UAE", img: "/page2.2.png", slug: "uae" },
     { name: "India", img: "/page2.3.png", slug: "india" },
+    { name: "Brazil", img: "/page2.4.png", slug: "brazil" },
+    { name: "Germany", img: "/page2.5.png", slug: "germany" },
+    { name: "Malaysia", img: "/page2.2.png", slug: "malaysia" },
     { name: "Singapore", img: "/page2.4.png", slug: "singapore" },
     { name: "South Korea", img: "/page2.5.png", slug: "south-korea" },
-    { name: "Thailand", img: "/page2.1.png", slug: "thailand" },
-    { name: "Malaysia", img: "/page2.2.png", slug: "malaysia" },
-    { name: "Mexico", img: "/page2.3.png", slug: "mexico" },
-    { name: "Brazil", img: "/page2.4.png", slug: "Brazil" },
     { name: "Spain", img: "/page2.5.png", slug: "spain" },
   ];
 
@@ -61,9 +64,9 @@ export default function Locations() {
         Leading Medical <span className="text-[#25282B]">Destinations</span>
       </h2>
 
-      <div ref={viewportRef} className="relative w-full overflow-hidden">
+      <div ref={viewportRef} className="relative w-full overflow-hidden py-4">
         <div
-          className="flex transition-transform duration-700"
+          className="flex transition-transform duration-700 px-1"
           style={{
             gap: `${GAP}px`,
             transform: `translateX(-${index * (cardWidth + GAP)}px)`,
@@ -73,11 +76,11 @@ export default function Locations() {
             <Link
               key={c.slug}
               href={`/destinations/${c.slug}`}
-              className="shrink-0 block active:scale-95 transition-transform"
+              className="shrink-0 block hover:scale-105 transition-all duration-300"
               style={{ width: cardWidth }}
             >
               <div
-                className="rounded-3xl overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.45)] hover:shadow-[0_28px_50px_rgba(0,0,0,0.55)] transition"
+                className="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
                 style={{ height: CARD_HEIGHT }}
               >
                 <div className="relative w-full h-full">

@@ -4,14 +4,14 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import FAQSection from "@/app/components/FAQSection";
 import { Breadcrumb } from "@/app/components/ui/breadcrumb";
-import Home from "@/app/destinations/brazil/Home";
-import Specialisations from "@/app/destinations/brazil/Specialisations";
-import Medical from "@/app/destinations/brazil/Medical";
-import Experience from "@/app/destinations/brazil/Experience";
-import Why from "@/app/destinations/brazil/Why";
+import Home from "@/app/destinations/thailand/Home";
+import Specialisations from "@/app/destinations/thailand/Specialisations";
+import Medical from "@/app/destinations/thailand/Medical";
+import Experience from "@/app/destinations/thailand/Experience";
+import Why from "@/app/destinations/thailand/Why";
 
 
-export default function BrazilPage() {
+export default function ThailandPage() {
   return (
     <>
       <Navbar />
@@ -21,7 +21,7 @@ export default function BrazilPage() {
           items={[
             { label: "Home", href: "/" },
             { label: "Destinations", href: "/destinations" },
-            { label: "Brazil" },
+            { label: "Thailand" },
           ]}
         />
       </div>
