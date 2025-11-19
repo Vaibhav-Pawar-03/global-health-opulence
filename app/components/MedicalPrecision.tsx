@@ -69,10 +69,39 @@ export default function MedicalPrecision() {
   const GAP = 44;
 
   const [index, setIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const maxIndex = countries.length - visibleCards;
 
   const handlePrev = () => setIndex((i) => Math.max(i - 1, 0));
   const handleNext = () => setIndex((i) => Math.min(i + 1, maxIndex));
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe && index < maxIndex) {
+      handleNext();
+    } else if (isRightSwipe && index > 0) {
+      handlePrev();
+    }
+
+    // Reset
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   return (
     <section className="relative bg-[#E9F5F2] py-16 md:py-24 px-6 rounded-4xl mx-4 md:mx-12 my-12 overflow-hidden">
@@ -106,6 +135,9 @@ export default function MedicalPrecision() {
               gap: `${GAP}px`,
               transform: `translateX(-${index * (cardWidth + GAP)}px)`,
             }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             {countries.map((c) => (
               <Link
