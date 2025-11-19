@@ -24,6 +24,8 @@ export default function Treatments() {
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   // Handle responsive visible count with proper hydration
   useEffect(() => {
@@ -43,6 +45,33 @@ export default function Treatments() {
   const handleNext = () => {
     if (activeIndex < cards.length - visibleCount)
       setActiveIndex(activeIndex + 1);
+  };
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe && activeIndex < cards.length - visibleCount) {
+      handleNext();
+    } else if (isRightSwipe && activeIndex > 0) {
+      handlePrev();
+    }
+
+    // Reset
+    setTouchStart(0);
+    setTouchEnd(0);
   };
 
   return (
@@ -68,6 +97,9 @@ export default function Treatments() {
                 transform: `translateX(-${activeIndex * (100 / visibleCount)}%)`,
                 gap: visibleCount === 1 ? "16px" : "32px", // 16px mobile, 32px desktop
               }}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               {cards.map((card, index) => {
                 // Check if card is in visible range
