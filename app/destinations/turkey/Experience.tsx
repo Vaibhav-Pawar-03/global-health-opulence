@@ -10,25 +10,25 @@ const cards = [
   {
     title: "Wellness & Nature Escapes",
     desc: "Türkiye's diverse landscapes — from the turquoise coastlines to the mineral-rich thermal spas of Pamukkale — offer serene settings for post-operative rejuvenation.",
-    image: "/DE1.png",
+    image: "/turkey-exp-1.jpg",
     alt: "Wellness & Nature Escapes",
   },
   {
     title: "Cultural Exploration",
     desc: "Experience Istanbul's architectural marvels, Cappadocia's ethereal valleys, and the Ottoman charm of Bursa — each destination a seamless blend of history and healing.",
-    image: "/DE2.png",
+    image: "/turkey-exp-2.jpg",
     alt: "Cultural Exploration",
   },
   {
     title: "Shopping & Leisure",
     desc: "Türkiye's bazaars and boutiques cater to luxury seekers, offering everything from fine textiles to handcrafted jewellery.",
-    image: "/DE3.png",
+    image: "/turkey-exp-3.jpg",
     alt: "Shopping & Leisure",
   },
   {
     title: "Culinary Highlights",
     desc: "From traditional meze and kebabs to Mediterranean seafood, Turkish cuisine complements recovery with balanced, flavourful nourishment.",
-    image: "/DE4.png",
+    image: "/turkey-exp-4.jpg",
     alt: "Culinary Highlights",
   },
 ];

@@ -10,25 +10,25 @@ const cards = [
   {
     title: "Wellness & Nature Escapes",
     desc: "India's diversity extends to its restorative environments — from Himalayan retreats to Kerala's Ayurvedic resorts designed for holistic post-operative recovery.",
-    image: "/DE1.png",
+    image: "/india-exp-1.jpg",
     alt: "Wellness & Nature Escapes",
   },
   {
     title: "Cultural Exploration",
     desc: "Explore the architectural marvels of Delhi, the heritage of Jaipur, or the spiritual calm of Rishikesh. Each region offers a rich cultural backdrop to your healing journey.",
-    image: "/DE2.png",
+    image: "/india-exp-2.jpg",
     alt: "Cultural Exploration",
   },
   {
     title: "Shopping & Leisure",
     desc: "Premium retail destinations in Mumbai and Delhi combine international luxury with authentic Indian craftsmanship.",
-    image: "/DE3.png",
+    image: "/india-exp-3.jpg",
     alt: "Shopping & Leisure",
   },
   {
     title: "Culinary Highlights",
     desc: "From aromatic curries to coastal delicacies, Indian cuisine nourishes both body and spirit, offering a perfect complement to wellness travel.",
-    image: "/DE4.png",
+    image: "/india-exp-4.jpg",
     alt: "Culinary Highlights",
   },
 ];

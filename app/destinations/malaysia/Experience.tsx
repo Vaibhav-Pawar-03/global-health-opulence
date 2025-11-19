@@ -10,25 +10,25 @@ const cards = [
   {
     title: "Wellness and Nature Escapes",
     desc: "Malaysia's tropical rainforests, islands, and coastal resorts provide the perfect setting for rest and rehabilitation. Wellness retreats in Langkawi and Sabah combine traditional therapies with modern comfort.",
-    image: "/DE1.png",
+    image: "/malaysia-exp-1.jpg",
     alt: "Wellness and Nature Escapes",
   },
   {
     title: "Cultural Discovery",
     desc: "Experience Malaysia's cultural diversity through its heritage cities, colourful festivals, and architectural landmarks that reflect Malay, Chinese, and Indian influences.",
-    image: "/DE2.png",
+    image: "/malaysia-exp-2.jpg",
     alt: "Cultural Discovery",
   },
   {
     title: "Shopping and Urban Leisure",
     desc: "Premium malls, artisan boutiques, and open-air markets across Kuala Lumpur and Penang offer everything from international luxury brands to handcrafted souvenirs.",
-    image: "/DE3.png",
+    image: "/malaysia-exp-3.jpg",
     alt: "Shopping and Urban Leisure",
   },
   {
     title: "Culinary Highlights",
     desc: "Malaysia's cuisine is a celebration of flavours. Enjoy Nasi Lemak, Satay, and Laksa, each dish crafted with local ingredients and culinary artistry.",
-    image: "/DE4.png",
+    image: "/malaysia-exp-4.jpg",
     alt: "Culinary Highlights",
   },
 ];

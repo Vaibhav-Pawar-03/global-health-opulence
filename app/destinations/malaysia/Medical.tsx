@@ -14,22 +14,22 @@ export default function MalaysiaDestinations() {
     {
       title: "Kuala Lumpur",
       desc: "The capital city offering top multi-specialty hospitals, advanced cardiac care, and luxury recovery accommodations.",
-      img: "/DM1.png",
+      img: "/malaysia-med-1.jpg",
     },
     {
       title: "Penang",
       desc: "A trusted destination for medical travellers known for high-quality orthopaedic and fertility services.",
-      img: "/DM2.png",
+      img: "/malaysia-med-2.jpg",
     },
     {
       title: "Johor Bahru",
       desc: "Modern hospitals close to Singapore providing accessible, affordable cross-border healthcare.",
-      img: "/DM3.png",
+      img: "/malaysia-med-3.jpg",
     },
     {
-      title: "Kuching",
-      desc: "Known for holistic and wellness-based care surrounded by calm natural landscapes.",
-      img: "/DM1.png",
+      title: "Malacca",
+      desc: "Historic city combining medical services with wellness tourism in a UNESCO heritage setting.",
+      img: "/malaysia-med-4.jpg",
     },
   ];
 
@@ -38,10 +38,39 @@ export default function MalaysiaDestinations() {
   const VISIBLE = 3;
 
   const [index, setIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const maxIndex = cards.length - VISIBLE;
 
   const prev = () => setIndex(index === 0 ? maxIndex : index - 1);
   const next = () => setIndex(index === maxIndex ? 0 : index + 1);
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      next();
+    } else if (isRightSwipe) {
+      prev();
+    }
+
+    // Reset
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   return (
     <section className="w-full py-16 px-6 md:px-24 bg-white">
@@ -63,6 +92,9 @@ export default function MalaysiaDestinations() {
             width: `${cards.length * (CARD_WIDTH + CARD_GAP)}px`,
             transform: `translateX(-${index * (CARD_WIDTH + CARD_GAP)}px)`,
           }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {cards.map((card, i) => (
             <div

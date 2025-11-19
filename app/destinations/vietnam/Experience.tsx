@@ -10,25 +10,25 @@ const cards = [
   {
     title: "Healing Landscapes",
     desc: "From the tranquil Mekong Delta to Halong Bay's emerald waters, Vietnam offers naturally serene environments that foster recovery and mental calm.",
-    image: "/DE1.png",
+    image: "/vietnam-exp-1.jpg",
     alt: "Healing Landscapes",
   },
   {
     title: "Cultural and Heritage Discovery",
     desc: "Vietnam's temples, French-inspired architecture, and heritage towns like Hoi An invite patients to reconnect with culture during recuperation.",
-    image: "/DE2.png",
+    image: "/vietnam-exp-2.jpg",
     alt: "Cultural and Heritage Discovery",
   },
   {
     title: "Wellness and Nature Retreats",
     desc: "Holistic spas and herbal therapies across Da Nang and Phu Quoc blend traditional Vietnamese healing practices with modern spa comfort.",
-    image: "/DE3.png",
+    image: "/vietnam-exp-3.jpg",
     alt: "Wellness and Nature Retreats",
   },
   {
     title: "Cuisine and Nutrition",
     desc: "Vietnamese cuisine celebrates balance and freshness. Signature dishes like Pho, Goi Cuon, and Bun Cha complement recovery through nutrient-rich, wholesome ingredients.",
-    image: "/DE4.png",
+    image: "/vietnam-exp-4.jpg",
     alt: "Cuisine and Nutrition",
   },
 ];

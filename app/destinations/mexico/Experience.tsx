@@ -10,31 +10,31 @@ const cards = [
   {
     title: "Cancún & Riviera Maya Beaches",
     desc: "Recover by turquoise waters with wellness spa programs.",
-    image: "/DE1.png",
+    image: "/mexico-exp-1.jpg",
     alt: "Cancún & Riviera Maya Beaches",
   },
   {
     title: "Teotihuacan & Chichen Itza",
     desc: "Explore ancient pyramid complexes and cultural heritage.",
-    image: "/DE2.png",
+    image: "/mexico-exp-2.jpg",
     alt: "Teotihuacan & Chichen Itza",
   },
   {
     title: "Mexican Cuisine Experiences",
     desc: "Taste local delicacies like tacos al pastor and mole poblano.",
-    image: "/DE3.png",
+    image: "/mexico-exp-3.jpg",
     alt: "Mexican Cuisine Experiences",
   },
   {
     title: "Colonial Cities & Art Walks",
     desc: "Visit Oaxaca, San Miguel de Allende, and Guadalajara's vibrant galleries.",
-    image: "/DE4.png",
+    image: "/mexico-exp-4.jpg",
     alt: "Colonial Cities & Art Walks",
   },
   {
     title: "Cenote Diving & Nature Escapes",
     desc: "Discover underground lakes and jungle retreats near Tulum.",
-    image: "/DE1.png",
+    image: "/mexico-exp-1.jpg",
     alt: "Cenote Diving & Nature Escapes",
   },
 ];

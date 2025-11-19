@@ -10,25 +10,25 @@ const cards = [
   {
     title: "Healing Climate",
     desc: "Spain's temperate weather and coastal air enhance post-surgical recovery and overall vitality.",
-    image: "/DE1.png",
+    image: "/spain-exp-1.jpg",
     alt: "Healing Climate",
   },
   {
     title: "Culture and Comfort",
     desc: "Architectural marvels, art museums, and seaside promenades create an uplifting recovery environment.",
-    image: "/DE2.png",
+    image: "/spain-exp-2.jpg",
     alt: "Culture and Comfort",
   },
   {
     title: "Nutrition and Lifestyle",
     desc: "The Mediterranean diet, rich in antioxidants and healthy fats, supports heart and immune health.",
-    image: "/DE3.png",
+    image: "/spain-exp-3.jpg",
     alt: "Nutrition and Lifestyle",
   },
   {
     title: "Recreation and Recovery",
     desc: "Coastal resorts and countryside villas offer privacy and tranquillity during recuperation.",
-    image: "/DE4.png",
+    image: "/spain-exp-4.jpg",
     alt: "Recreation and Recovery",
   },
 ];

@@ -10,31 +10,31 @@ const cards = [
   {
     title: "Desert Safari & Dune Adventures",
     desc: "Experience the golden dunes and luxury desert camps.",
-    image: "/DE1.png",
+    image: "/uae-exp-1.jpg",
     alt: "Desert Safari & Dune Adventures",
   },
   {
     title: "Burj Khalifa & Downtown Dubai",
     desc: "Visit the world's tallest building and designer shopping avenues.",
-    image: "/DE2.png",
+    image: "/uae-exp-2.jpg",
     alt: "Burj Khalifa & Downtown Dubai",
   },
   {
     title: "Sheikh Zayed Grand Mosque",
     desc: "Explore the architectural marvel in Abu Dhabi.",
-    image: "/DE3.png",
+    image: "/uae-exp-3.jpg",
     alt: "Sheikh Zayed Grand Mosque",
   },
   {
     title: "Spa & Wellness Retreats",
     desc: "Indulge in world-class recovery spas in Ras Al Khaimah and Fujairah.",
-    image: "/DE4.png",
+    image: "/uae-exp-4.jpg",
     alt: "Spa & Wellness Retreats",
   },
   {
     title: "Marina Cruises & Beachfront Leisure",
     desc: "Sail across Dubai Marina or unwind by the Arabian Gulf.",
-    image: "/DE1.png",
+    image: "/uae-exp-1.jpg",
     alt: "Marina Cruises & Beachfront Leisure",
   },
 ];

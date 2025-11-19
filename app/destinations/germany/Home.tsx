@@ -19,7 +19,7 @@ export default function Home() {
       ) : (
         <>
           <Image
-            src="/hero.png"
+            src="/germany-hero.jpg"
             alt="Germany Healthcare"
             fill
             className="object-cover"

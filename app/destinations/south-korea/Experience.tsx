@@ -10,25 +10,25 @@ const cards = [
   {
     title: "Cultural Heritage and Innovation",
     desc: "Explore a nation where ancient palaces coexist with high-tech cities, creating a serene yet stimulating atmosphere for recovery.",
-    image: "/DE1.png",
+    image: "/south-korea-exp-1.jpg",
     alt: "Cultural Heritage and Innovation",
   },
   {
     title: "Wellness and Natural Renewal",
     desc: "Thermal spas, herbal therapies, and forest wellness retreats invite deep restoration.",
-    image: "/DE2.png",
+    image: "/south-korea-exp-2.jpg",
     alt: "Wellness and Natural Renewal",
   },
   {
     title: "Healing Cuisine",
     desc: "Korean nutrition focuses on balance and immunity with dishes like bibimbap, ginseng broth, and fermented specialties.",
-    image: "/DE3.png",
+    image: "/south-korea-exp-3.jpg",
     alt: "Healing Cuisine",
   },
   {
     title: "Leisure and Discovery",
     desc: "Luxury shopping, art spaces, and coastal escapes offer fulfilling post-care experiences.",
-    image: "/DE4.png",
+    image: "/south-korea-exp-4.jpg",
     alt: "Leisure and Discovery",
   },
 ];

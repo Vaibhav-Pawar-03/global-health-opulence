@@ -12,14 +12,24 @@ const body1 = Inter({
 export default function SingaporeDestinations() {
   const cards = [
     {
-      title: "Orchard and Novena Districts",
-      desc: "Home to Singapore's top private hospitals and wellness facilities.",
-      img: "/DM1.png",
+      title: "Orchard Road",
+      desc: "Home to Singapore's top private hospitals and wellness facilities in the shopping district.",
+      img: "/singapore-med-1.jpg",
     },
     {
-      title: "Outram and Kent Ridge",
-      desc: "Centres for academic research, teaching hospitals, and government-accredited specialists.",
-      img: "/DM2.png",
+      title: "Marina Bay",
+      desc: "Modern medical centres with state-of-the-art facilities in Singapore's iconic skyline.",
+      img: "/singapore-med-2.jpg",
+    },
+    {
+      title: "Sentosa",
+      desc: "Wellness-focused medical facilities combined with resort recovery environments.",
+      img: "/singapore-med-3.jpg",
+    },
+    {
+      title: "Changi",
+      desc: "Convenient medical services near Singapore's world-class airport with excellent connectivity.",
+      img: "/singapore-med-4.jpg",
     },
   ];
 
@@ -28,10 +38,39 @@ export default function SingaporeDestinations() {
   const VISIBLE = 3;
 
   const [index, setIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const maxIndex = cards.length - VISIBLE;
 
   const prev = () => setIndex(index === 0 ? maxIndex : index - 1);
   const next = () => setIndex(index === maxIndex ? 0 : index + 1);
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      next();
+    } else if (isRightSwipe) {
+      prev();
+    }
+
+    // Reset
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   return (
     <section className="w-full py-16 px-6 md:px-24 bg-white">
@@ -53,6 +92,9 @@ export default function SingaporeDestinations() {
             width: `${cards.length * (CARD_WIDTH + CARD_GAP)}px`,
             transform: `translateX(-${index * (CARD_WIDTH + CARD_GAP)}px)`,
           }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {cards.map((card, i) => (
             <div

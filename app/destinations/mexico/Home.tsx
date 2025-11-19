@@ -13,7 +13,7 @@ export default function MexicoHero() {
       {/* BG IMAGE */}
       <div className="absolute inset-0">
         <Image
-          src="/Bd1.png"
+          src="/mexico-hero.jpg"
           alt="Mexico Healthcare Scene"
           fill
           priority

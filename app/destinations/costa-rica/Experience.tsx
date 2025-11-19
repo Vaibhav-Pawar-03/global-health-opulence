@@ -10,25 +10,25 @@ const cards = [
   {
     title: "Eco-Healing Environments",
     desc: "Rainforests, beaches, and mountain lodges provide therapeutic peace and oxygen-rich air.",
-    image: "/DE1.png",
+    image: "/costa-rica-exp-1.jpg",
     alt: "Eco-Healing Environments",
   },
   {
     title: "Cultural Warmth",
     desc: "Costa Rica's hospitality and 'pura vida' philosophy make recovery emotionally nurturing.",
-    image: "/DE2.png",
+    image: "/costa-rica-exp-2.jpg",
     alt: "Cultural Warmth",
   },
   {
     title: "Wholesome Nutrition",
     desc: "Organic produce, tropical fruits, and clean eating are central to Costa Rican wellness culture.",
-    image: "/DE3.png",
+    image: "/costa-rica-exp-3.jpg",
     alt: "Wholesome Nutrition",
   },
   {
     title: "Sustainable Recovery",
     desc: "Many healthcare facilities operate under eco-certified, environmentally responsible frameworks.",
-    image: "/DE4.png",
+    image: "/costa-rica-exp-4.jpg",
     alt: "Sustainable Recovery",
   },
 ];

@@ -19,7 +19,7 @@ export default function Home() {
       ) : (
         <>
           <Image
-            src="/hero.png"
+            src="/uae-hero.jpg"
             alt="UAE Healthcare"
             fill
             className="object-cover"

@@ -10,25 +10,25 @@ const cards = [
   {
     title: "Safety and Regulation",
     desc: "Singapore's healthcare system is backed by robust governance, ensuring consistency, transparency, and ethical standards.",
-    image: "/DE1.png",
+    image: "/singapore-exp-1.jpg",
     alt: "Safety and Regulation",
   },
   {
     title: "Urban Serenity",
     desc: "Green parks, waterfront promenades, and peaceful luxury hotels create a calm environment for post-treatment rest.",
-    image: "/DE2.png",
+    image: "/singapore-exp-2.jpg",
     alt: "Urban Serenity",
   },
   {
     title: "Nutrition and Wellness",
     desc: "Singaporean cuisine promotes balance, incorporating nutrient-rich Asian ingredients ideal for recovery.",
-    image: "/DE3.png",
+    image: "/singapore-exp-3.jpg",
     alt: "Nutrition and Wellness",
   },
   {
     title: "Connectivity and Comfort",
     desc: "As a global aviation hub, Singapore offers seamless medical travel supported by multilingual care teams.",
-    image: "/DE4.png",
+    image: "/singapore-exp-4.jpg",
     alt: "Connectivity and Comfort",
   },
 ];

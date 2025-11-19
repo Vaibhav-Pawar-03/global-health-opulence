@@ -10,31 +10,31 @@ const cards = [
   {
     title: "Neuschwanstein Castle",
     desc: "Visit the fairy-tale castle in Bavaria surrounded by the Alps.",
-    image: "/DE1.png",
+    image: "/germany-exp-1.jpg",
     alt: "Neuschwanstein Castle",
   },
   {
     title: "Berlin's Cultural Circuit",
     desc: "Explore the Berlin Wall, Museum Island, and classical music concerts.",
-    image: "/DE2.png",
+    image: "/germany-exp-2.jpg",
     alt: "Berlin's Cultural Circuit",
   },
   {
     title: "Rhine River Cruises",
     desc: "Enjoy scenic boat rides past vineyards and medieval towns.",
-    image: "/DE3.png",
+    image: "/germany-exp-3.jpg",
     alt: "Rhine River Cruises",
   },
   {
     title: "Black Forest Retreats",
     desc: "Recover amid nature trails and mineral-rich thermal spas.",
-    image: "/DE4.png",
+    image: "/germany-exp-4.jpg",
     alt: "Black Forest Retreats",
   },
   {
     title: "Christmas Markets",
     desc: "Immerse in Europe's most festive shopping and dining experiences.",
-    image: "/DE1.png",
+    image: "/germany-exp-1.jpg",
     alt: "Christmas Markets",
   },
 ];

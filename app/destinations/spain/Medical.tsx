@@ -12,19 +12,24 @@ const body1 = Inter({
 export default function SpainDestinations() {
   const cards = [
     {
+      title: "Barcelona",
+      desc: "A hub for cosmetic surgery, fertility, and regenerative medicine with Mediterranean charm.",
+      img: "/spain-med-1.jpg",
+    },
+    {
       title: "Madrid",
       desc: "Spain's medical capital, housing top private hospitals and research centres.",
-      img: "/DM1.png",
+      img: "/spain-med-2.jpg",
     },
     {
-      title: "Barcelona",
-      desc: "A hub for cosmetic surgery, fertility, and regenerative medicine.",
-      img: "/DM2.png",
+      title: "Valencia",
+      desc: "Modern medical facilities with integrated wellness programs by the Mediterranean coast.",
+      img: "/spain-med-3.jpg",
     },
     {
-      title: "Valencia and Marbella",
-      desc: "Popular for recovery by the sea and integrated wellness programs.",
-      img: "/DM3.png",
+      title: "Seville",
+      desc: "Combines historic charm with advanced healthcare and peaceful recovery settings.",
+      img: "/spain-med-4.jpg",
     },
   ];
 
@@ -33,10 +38,39 @@ export default function SpainDestinations() {
   const VISIBLE = 3;
 
   const [index, setIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const maxIndex = cards.length - VISIBLE;
 
   const prev = () => setIndex(index === 0 ? maxIndex : index - 1);
   const next = () => setIndex(index === maxIndex ? 0 : index + 1);
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      next();
+    } else if (isRightSwipe) {
+      prev();
+    }
+
+    // Reset
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   return (
     <section className="w-full py-16 px-6 md:px-24 bg-white">
@@ -58,6 +92,9 @@ export default function SpainDestinations() {
             width: `${cards.length * (CARD_WIDTH + CARD_GAP)}px`,
             transform: `translateX(-${index * (CARD_WIDTH + CARD_GAP)}px)`,
           }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {cards.map((card, i) => (
             <div

@@ -14,22 +14,22 @@ export default function MexicoDestinations() {
     {
       title: "Mexico City",
       desc: "The capital's premier medical facilities offer comprehensive healthcare with cutting-edge technology and internationally certified specialists.",
-      img: "/DM1.png",
+      img: "/mexico-med-1.jpg",
     },
     {
       title: "Guadalajara",
       desc: "Renowned for exceptional bariatric and cosmetic surgery centres, combining medical excellence with cultural richness.",
-      img: "/DM2.png",
+      img: "/mexico-med-2.jpg",
     },
     {
       title: "Monterrey",
       desc: "Modern healthcare hub featuring advanced cardiac care, orthopaedics, and state-of-the-art medical infrastructure.",
-      img: "/DM3.png",
+      img: "/mexico-med-3.jpg",
     },
     {
       title: "Cancún",
       desc: "Blending world-class dentistry and cosmetic procedures with beachfront recovery and luxury resort amenities.",
-      img: "/DM1.png",
+      img: "/mexico-med-4.jpg",
     },
   ];
 
@@ -38,10 +38,39 @@ export default function MexicoDestinations() {
   const VISIBLE = 3;
 
   const [index, setIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const maxIndex = cards.length - VISIBLE;
 
   const prev = () => setIndex(index === 0 ? maxIndex : index - 1);
   const next = () => setIndex(index === maxIndex ? 0 : index + 1);
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      next();
+    } else if (isRightSwipe) {
+      prev();
+    }
+
+    // Reset
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   return (
     <section className="w-full py-16 px-6 md:px-24 bg-white">
@@ -63,6 +92,9 @@ export default function MexicoDestinations() {
             width: `${cards.length * (CARD_WIDTH + CARD_GAP)}px`,
             transform: `translateX(-${index * (CARD_WIDTH + CARD_GAP)}px)`,
           }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {cards.map((card, i) => (
             <div

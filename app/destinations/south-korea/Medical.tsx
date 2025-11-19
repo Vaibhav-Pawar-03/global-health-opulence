@@ -14,22 +14,22 @@ export default function SouthKoreaDestinations() {
     {
       title: "Seoul",
       desc: "Home to leading university hospitals and luxury recovery suites.",
-      img: "/DM1.png",
+      img: "/south-korea-med-1.jpg",
     },
     {
       title: "Busan",
       desc: "Coastal excellence with international-standard multispecialty centres.",
-      img: "/DM2.png",
+      img: "/south-korea-med-2.jpg",
     },
     {
       title: "Incheon",
       desc: "Streamlined access and modern facilities near the international gateway.",
-      img: "/DM3.png",
+      img: "/south-korea-med-3.jpg",
     },
     {
       title: "Daegu",
       desc: "Centre for regenerative research and premium cosmetic care.",
-      img: "/DM1.png",
+      img: "/south-korea-med-4.jpg",
     },
   ];
 
@@ -38,10 +38,39 @@ export default function SouthKoreaDestinations() {
   const VISIBLE = 3;
 
   const [index, setIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const maxIndex = cards.length - VISIBLE;
 
   const prev = () => setIndex(index === 0 ? maxIndex : index - 1);
   const next = () => setIndex(index === maxIndex ? 0 : index + 1);
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      next();
+    } else if (isRightSwipe) {
+      prev();
+    }
+
+    // Reset
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   return (
     <section className="w-full py-16 px-6 md:px-24 bg-white">
@@ -63,6 +92,9 @@ export default function SouthKoreaDestinations() {
             width: `${cards.length * (CARD_WIDTH + CARD_GAP)}px`,
             transform: `translateX(-${index * (CARD_WIDTH + CARD_GAP)}px)`,
           }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {cards.map((card, i) => (
             <div

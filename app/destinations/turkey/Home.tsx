@@ -13,7 +13,7 @@ export default function TurkeyHero() {
       {/* BG IMAGE */}
       <div className="absolute inset-0">
         <Image
-          src="/Bd1.png"
+          src="/turkey-hero.jpg"
           alt="Türkiye Healthcare Scene"
           fill
           priority

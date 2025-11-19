@@ -10,25 +10,25 @@ const cards = [
   {
     title: "Wellness and Nature Escapes",
     desc: "Thailand's tropical beauty enhances recovery through beachfront resorts, mountain sanctuaries, and wellness spas offering yoga and traditional Thai therapies.",
-    image: "/DE1.png",
+    image: "/thailand-exp-1.jpg",
     alt: "Wellness and Nature Escapes",
   },
   {
     title: "Cultural Exploration",
     desc: "Discover ornate temples, floating markets, and ancient traditions that reflect Thailand's harmony and mindfulness.",
-    image: "/DE2.png",
+    image: "/thailand-exp-2.jpg",
     alt: "Cultural Exploration",
   },
   {
     title: "Shopping and Leisure",
     desc: "Luxury malls in Bangkok and artisanal markets in Chiang Mai make Thailand ideal for both modern and cultural shopping experiences.",
-    image: "/DE3.png",
+    image: "/thailand-exp-3.jpg",
     alt: "Shopping and Leisure",
   },
   {
     title: "Culinary Highlights",
     desc: "Enjoy vibrant Thai cuisine such as Tom Yum Goong, Green Curry, and Mango Sticky Rice, each prepared with a focus on freshness and balance.",
-    image: "/DE4.png",
+    image: "/thailand-exp-4.jpg",
     alt: "Culinary Highlights",
   },
 ];

@@ -14,22 +14,22 @@ export default function UAEDestinations() {
     {
       title: "Dubai",
       desc: "The UAE's medical tourism capital featuring luxury hospitals, specialized clinics, and premium recovery facilities with world-class service.",
-      img: "/DM1.png",
+      img: "/uae-med-1.jpg",
     },
     {
       title: "Abu Dhabi",
       desc: "Home to internationally accredited medical centres, advanced research facilities, and comprehensive healthcare services in a modern city setting.",
-      img: "/DM2.png",
+      img: "/uae-med-2.jpg",
     },
     {
       title: "Sharjah",
       desc: "Offering quality healthcare with competitive pricing, specialized dental clinics, and family-friendly medical facilities.",
-      img: "/DM3.png",
+      img: "/uae-med-3.jpg",
     },
     {
-      title: "Ras Al Khaimah",
-      desc: "Combines medical care with wellness retreats, offering spa-integrated recovery programs in serene mountain and coastal settings.",
-      img: "/DM1.png",
+      title: "Ajman",
+      desc: "Combines medical care with wellness retreats, offering spa-integrated recovery programs in serene coastal settings.",
+      img: "/uae-med-4.jpg",
     },
   ];
 
@@ -38,10 +38,39 @@ export default function UAEDestinations() {
   const VISIBLE = 3;
 
   const [index, setIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const maxIndex = cards.length - VISIBLE;
 
   const prev = () => setIndex(index === 0 ? maxIndex : index - 1);
   const next = () => setIndex(index === maxIndex ? 0 : index + 1);
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      next();
+    } else if (isRightSwipe) {
+      prev();
+    }
+
+    // Reset
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   return (
     <section className="w-full py-16 px-6 md:px-24 bg-white">
@@ -63,6 +92,9 @@ export default function UAEDestinations() {
             width: `${cards.length * (CARD_WIDTH + CARD_GAP)}px`,
             transform: `translateX(-${index * (CARD_WIDTH + CARD_GAP)}px)`,
           }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           {cards.map((card, i) => (
             <div
