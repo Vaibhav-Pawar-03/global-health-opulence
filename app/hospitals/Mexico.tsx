@@ -7,33 +7,31 @@ export default function MexicoHospitals() {
       title: "Hospitales Ángeles – Nationwide",
       desc: "Mexico's largest private hospital network.",
       img: "/mex1.png",
+      url: "https://www.hospitalesangeles.com/en/",
     },
     {
       title: "Médica Sur – Mexico City",
       desc: "Leading tertiary hospital with advanced diagnostics.",
       img: "/mex2.png",
+      url: "https://www.medicasur.com.mx/",
     },
     {
       title: "Centro Médico ABC – Mexico City",
       desc: "Renowned teaching and specialty hospital.",
       img: "/mex3.png",
-    },
-
-    // ---- Mock cards ---- //
-    {
-      title: "Mock Hospital – Mexico",
-      desc: "Placeholder description for visual consistency.",
-      img: "/mex1.png",
+      url: "https://www.abchospital.com/",
     },
     {
-      title: "Mock Health Institute – Guadalajara",
-      desc: "Sample placeholder text for mock listing.",
-      img: "/mex2.png",
+      title: "Christus Muguerza – Monterrey",
+      desc: "Trusted global brand with strong medical ethics.",
+      img: "/christus.png",
+      url: "https://www.christusmuguerza.com.mx/",
     },
     {
-      title: "Mock Medical Centre – Monterrey",
-      desc: "Prototype mock card for UI testing.",
-      img: "/mex3.png",
+      title: "Star Médica – Multiple Cities",
+      desc: "Expanding chain providing accessible quality care.",
+      img: "/starmedica.png",
+      url: "https://www.starmedica.com/",
     },
   ];
 

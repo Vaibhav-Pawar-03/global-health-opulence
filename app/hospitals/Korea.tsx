@@ -7,33 +7,31 @@ export default function SouthKoreaHospitals() {
       title: "Asan Medical Center – Seoul",
       desc: "Korea's most advanced referral hospital.",
       img: "/kr1.png",
+      url: "https://www.amc.seoul.kr/asan/lang/eng/main.do",
     },
     {
       title: "Samsung Medical Center – Seoul",
       desc: "Pioneer in robotics and personalized treatment.",
       img: "/kr2.png",
+      url: "https://www.samsunghospital.com/gb/main/main.do",
     },
     {
       title: "Severance Hospital – Seoul",
       desc: "Global leader in multidisciplinary clinical excellence.",
       img: "/kr3.png",
-    },
-
-    // ---- Mock Cards ----
-    {
-      title: "Mock Hospital – Seoul",
-      desc: "UI placeholder for future data.",
-      img: "/kr1.png",
+      url: "https://sev.severance.healthcare/sev/index.do",
     },
     {
-      title: "Mock National Institute – Busan",
-      desc: "Sample text for testing layout.",
-      img: "/kr2.png",
+      title: "Seoul National University Hospital – Seoul",
+      desc: "Academic institution of international repute.",
+      img: "/snuh.png",
+      url: "https://www.snuh.org/global/en/main.do",
     },
     {
-      title: "Mock Medical Campus – Incheon",
-      desc: "Temporary mock card for UI preview.",
-      img: "/kr3.png",
+      title: "Korea University Anam Hospital – Seoul",
+      desc: "Renowned for high-end specialty care.",
+      img: "/kuah.png",
+      url: "https://www.anam.kumc.or.kr/int/main.do",
     },
   ];
 

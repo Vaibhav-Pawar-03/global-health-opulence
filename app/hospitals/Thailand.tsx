@@ -7,31 +7,31 @@ export default function ThailandHospitals() {
       title: "Bumrungrad International Hospital – Bangkok",
       desc: "Among the world's top international hospitals.",
       img: "/th1.png",
+      url: "https://www.bumrungrad.com/en",
     },
     {
       title: "Bangkok Hospital / BDMS – Nationwide",
       desc: "The region's largest healthcare network.",
       img: "/th2.png",
+      url: "https://www.bangkokhospital.com/en",
     },
     {
       title: "Samitivej Hospitals – Bangkok",
       desc: "Recognised for premium maternity and family care.",
       img: "/th3.png",
+      url: "https://www.samitivejhospitals.com/",
     },
     {
-      title: "Mock Hospital – Thailand",
-      desc: "Temporary sample description for mock card.",
-      img: "/th1.png",
+      title: "BNH Hospital – Bangkok",
+      desc: "Heritage hospital delivering trusted private care.",
+      img: "/bnh.png",
+      url: "https://www.bnhhospital.com/",
     },
     {
-      title: "Mock Wellness Centre – Phuket",
-      desc: "Sample placeholder text for testing layout.",
-      img: "/th2.png",
-    },
-    {
-      title: "Mock Medical Institute – Chiang Mai",
-      desc: "Additional mock sample card for UI consistency.",
-      img: "/th3.png",
+      title: "Bangkok Hospital Phuket – Phuket",
+      desc: "Ideal for luxury recovery and medical travel.",
+      img: "/bhphuket.png",
+      url: "https://www.phukethospital.com/",
     },
   ];
 

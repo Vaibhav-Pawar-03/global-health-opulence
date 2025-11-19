@@ -7,33 +7,31 @@ export default function VietnamHospitals() {
       title: "FV Hospital – Ho Chi Minh City",
       desc: "International-standard facility for global patients.",
       img: "/vn1.png",
+      url: "https://www.fvhospital.com/",
     },
     {
       title: "Vinmec Healthcare System – Nationwide",
       desc: "Modern private hospitals across Vietnam.",
       img: "/vn2.png",
+      url: "https://www.vinmec.com/eng/",
     },
     {
       title: "Cho Ray Hospital – Ho Chi Minh City",
       desc: "Major public referral centre.",
       img: "/vn3.png",
-    },
-
-    // ---- Mock Cards ----
-    {
-      title: "Mock Hospital – Vietnam",
-      desc: "Placeholder card for UI preview.",
-      img: "/vn1.png",
+      url: "https://www.choray.vn/",
     },
     {
-      title: "Mock Care Institute – Da Nang",
-      desc: "Sample mock content for layout.",
-      img: "/vn2.png",
+      title: "Bach Mai Hospital – Hanoi",
+      desc: "Recognised academic and specialty institution.",
+      img: "/bachmai.png",
+      url: "https://benhvienbachmai.vn/",
     },
     {
-      title: "Mock Medical Center – Hanoi",
-      desc: "Temporary card for testing alignment.",
-      img: "/vn3.png",
+      title: "Hoan My Medical Corporation – Nationwide",
+      desc: "Trusted private healthcare network.",
+      img: "/hoanmy.png",
+      url: "https://hoanmy.com/",
     },
   ];
 

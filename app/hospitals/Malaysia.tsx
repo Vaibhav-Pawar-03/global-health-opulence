@@ -7,33 +7,31 @@ export default function MalaysiaHospitals() {
       title: "Gleneagles Hospital – Kuala Lumpur",
       desc: "Premium multispecialty care for international patients.",
       img: "/mal1.png",
+      url: "https://www.gleneagles.com.my/",
     },
     {
       title: "Prince Court Medical Centre – Kuala Lumpur",
       desc: "Benchmark for medical hospitality.",
       img: "/mal2.png",
+      url: "https://www.princecourt.com/",
     },
     {
       title: "Sunway Medical Centre – Subang Jaya",
       desc: "Leading tertiary private hospital.",
       img: "/mal3.png",
-    },
-
-    // ---- Mock 3 Cards ----
-    {
-      title: "Mock Hospital – Malaysia",
-      desc: "Placeholder text for testing UI.",
-      img: "/mal1.png",
+      url: "https://www.sunwaymedical.com/",
     },
     {
-      title: "Mock Health Institute – Penang",
-      desc: "Additional mock entry for preview.",
-      img: "/mal2.png",
+      title: "KPJ Healthcare – Nationwide",
+      desc: "Trusted name in patient-first medical services.",
+      img: "/kpj.png",
+      url: "https://www.kpjhealth.com.my/",
     },
     {
-      title: "Mock Wellness Centre – Johor Bahru",
-      desc: "Sample mock description.",
-      img: "/mal3.png",
+      title: "Pantai Hospital – Multiple Locations",
+      desc: "Reputed for consistent international care.",
+      img: "/pantai.png",
+      url: "https://www.pantai.com.my/",
     },
   ];
 
