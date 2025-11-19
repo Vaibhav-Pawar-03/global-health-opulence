@@ -2,23 +2,33 @@
 
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import { useState } from "react";
+import DestinationHeroPlaceholder from "@/app/components/DestinationHeroPlaceholder";
 
 const body1 = Inter({
   weight: ["400"],
 });
 
 export default function Home() {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <section className="relative w-full h-[600px] flex items-center">
-      <Image
-        src="/hero.png"
-        alt="South Korea Healthcare"
-        fill
-        className="object-cover"
-        priority
-      />
-
-      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
+      {imageError ? (
+        <DestinationHeroPlaceholder countryName="South Korea" className="absolute inset-0" />
+      ) : (
+        <>
+          <Image
+            src="/hero.png"
+            alt="South Korea Healthcare"
+            fill
+            className="object-cover"
+            priority
+            onError={() => setImageError(true)}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent" />
+        </>
+      )}
 
       <div className="relative z-10 max-w-3xl px-6 md:px-24 space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-[#1073B9] leading-tight">

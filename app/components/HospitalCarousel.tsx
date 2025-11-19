@@ -73,7 +73,7 @@ export default function HospitalCarousel({
             {hospitals.map((item, index) => (
               <div
                 key={index}
-                className="group w-[280px] sm:w-[320px] md:w-[400px] h-[480px] sm:h-[520px] md:h-[580px] bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 flex-shrink-0 flex flex-col"
+                className="group w-[280px] sm:w-[320px] md:w-[400px] h-[420px] sm:h-[460px] md:h-[500px] bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1 flex-shrink-0 flex flex-col"
               >
                 <div className="w-full h-[180px] sm:h-[200px] md:h-[260px] relative overflow-hidden rounded-t-2xl">
                   {imageErrors[index] ? (
@@ -99,7 +99,7 @@ export default function HospitalCarousel({
                   <h3 className="font-bold text-lg sm:text-xl text-[#25282B] leading-tight mb-2 sm:mb-3 line-clamp-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3 sm:mb-3 md:mb-2 line-clamp-3 flex-1">
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-2 sm:mb-2 md:mb-1 line-clamp-3 flex-1">
                     {item.desc}
                   </p>
 
