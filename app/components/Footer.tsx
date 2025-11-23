@@ -29,9 +29,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Services */}
+        {/* Treatments & Procedures */}
         <div className="md:w-full">
-          <h4 className="text-[#2FAF83] font-semibold text-lg mb-5">Services</h4>
+          <h4 className="text-[#2FAF83] font-semibold text-lg mb-5">Treatments & Procedures</h4>
           <ul className="space-y-3 text-base text-gray-300">
             <li><a href="#" className="hover:text-[#2FAF83] transition">Booking appointments</a></li>
             <li><a href="#" className="hover:text-[#2FAF83] transition">Online consultations</a></li>
