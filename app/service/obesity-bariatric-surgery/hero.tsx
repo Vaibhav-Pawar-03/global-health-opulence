@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="relative flex justify-center">
           <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-white p-3">
             <Image
-              src="/Obesity src="/placeholder.png" Bariatric Surgery.png"
+              src="/Obesity & Bariatric Surgery.png"
               alt="Obesity & Bariatric Surgery"
               width={600}
               height={400}
