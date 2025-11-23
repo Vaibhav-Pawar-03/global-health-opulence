@@ -6,23 +6,23 @@ export default function Treatment() {
   const items = [
     {
       title: "LASIK and SMILE Eye Surgery",
-      img: "/LASIK and SMILE Eye Surgery .png",
+      img: "/LASIK and SMILE Eye Surgery.png",
     },
     {
       title: "Cataract and Lens Replacement",
-      img: "/Cataract and Lens Replacement .png",
+      img: "/Cataract and Lens Replacement.png",
     },
     {
       title: "Corneal Transplant and Retina Care",
-      img: "/Corneal Transplant and Retina Care .png",
+      img: "/Corneal Transplant and Retina Care.png",
     },
     {
       title: "Glaucoma and Diabetic Eye Treatment",
-      img: "/Glaucoma and Diabetic Eye Treatment .png",
+      img: "/Glaucoma and Diabetic Eye Treatment.png",
     },
     {
       title: "Refractive and Pediatric Ophthalmology",
-      img: "/Refractive and Pediatric Ophthalmology .png",
+      img: "/Refractive and Pediatric Ophthalmology.png",
     },
     {
       title: "Comprehensive Eye Health Assessment",

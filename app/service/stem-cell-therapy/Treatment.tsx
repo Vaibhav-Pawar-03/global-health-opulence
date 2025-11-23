@@ -14,7 +14,7 @@ export default function Treatment() {
     },
     {
       title: "Autoimmune and Metabolic Disorder Treatment",
-      img: "/Regenerative Cell and Peptide Therapy .png",
+      img: "/Regenerative Cell and Peptide Therapy.png",
     },
     {
       title: "Anti-Aging and Cellular Rejuvenation Therapy",
@@ -26,7 +26,7 @@ export default function Treatment() {
     },
     {
       title: "Cosmetic Stem Cell Enhancement",
-      img: "/PRP and Stem Cell Scalp Therapy .png",
+      img: "/PRP and Stem Cell Scalp Therapy.png",
     },
   ];
 

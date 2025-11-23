@@ -6,23 +6,23 @@ export default function Treatment() {
   const items = [
     {
       title: "Dental Implants and All-on-4 Restorations",
-      img: "/Dental Implants and All-on-4 Restorations .png",
+      img: "/Dental Implants and All-on-4 Restorations.png",
     },
     {
       title: "Porcelain Veneers and Smile Makeovers",
-      img: "/Porcelain Veneers and Smile Makeovers .png",
+      img: "/Porcelain Veneers and Smile Makeovers.png",
     },
     {
       title: "Teeth Whitening and Cosmetic Bonding",
-      img: "/Teeth Whitening and Cosmetic Bonding .png",
+      img: "/Teeth Whitening and Cosmetic Bonding.png",
     },
     {
       title: "Root Canal and Crown Treatments",
-      img: "/Root Canal and Crown Treatments .png",
+      img: "/Root Canal and Crown Treatments.png",
     },
     {
       title: "Orthodontics and Invisalign Aligners",
-      img: "/Orthodontics and Invisalign Aligners .png",
+      img: "/Orthodontics and Invisalign Aligners.png",
     },
     {
       title: "Advanced Dental Care Solutions",

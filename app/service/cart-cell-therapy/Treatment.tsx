@@ -6,27 +6,27 @@ export default function Treatment() {
   const items = [
     {
       title: "CAR-T Therapy for Leukemia and Lymphoma",
-      img: "/CAR-T Therapy for Leukemia and Lymphoma .png",
+      img: "/CAR-T Therapy for Leukemia and Lymphoma.png",
     },
     {
       title: "Immune Cell Engineering and Expansion",
-      img: "/Immune Cell Engineering and Expansion .png",
+      img: "/Immune Cell Engineering and Expansion.png",
     },
     {
       title: "Targeted Cellular Immunotherapy",
-      img: "/Targeted Cellular Immunotherapy .png",
+      img: "/Targeted Cellular Immunotherapy.png",
     },
     {
       title: "Combination Therapy with Chemotherapy and Radiotherapy",
-      img: "/Combination Therapy with Chemotherapy and Radiotherapy .png",
+      img: "/Combination Therapy with Chemotherapy and Radiotherapy.png",
     },
     {
       title: "Post-Therapy Monitoring and Support",
-      img: "/Post-Therapy Monitoring and Support .png",
+      img: "/Post-Therapy Monitoring and Support.png",
     },
     {
       title: "Advanced Immunotherapy Protocols",
-      img: "/Immunotherapy and CAR-T Cell Therapy .png",
+      img: "/Immunotherapy and CAR-T Cell Therapy.png",
     },
   ];
 

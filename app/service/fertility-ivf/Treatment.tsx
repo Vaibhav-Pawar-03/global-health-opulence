@@ -14,11 +14,11 @@ export default function Treatment() {
     },
     {
       title: "Donor and Surrogacy Programs",
-      img: "/Fertility and Reproductive Health Care .png",
+      img: "/Fertility and Reproductive Health Care.png",
     },
     {
       title: "Genetic and Hormonal Fertility Assessments",
-      img: "/Fertility and Reproductive Health Care .png",
+      img: "/Fertility and Reproductive Health Care.png",
     },
     {
       title: "Fertility Preservation and Counseling",

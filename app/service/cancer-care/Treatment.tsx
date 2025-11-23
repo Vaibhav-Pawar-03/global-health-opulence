@@ -6,15 +6,15 @@ export default function Treatment() {
   const items = [
     {
       title: "Chemotherapy and Targeted Therapy",
-      img: "/Chemotherapy and Targeted Therapy .png",
+      img: "/Chemotherapy and Targeted Therapy.png",
     },
     {
       title: "Radiation Oncology (IMRT, CyberKnife, Proton Therapy)",
-      img: "/Radiation Oncology (IMRT, CyberKnife, Proton Therapy) .png",
+      img: "/Radiation Oncology (IMRT, CyberKnife, Proton Therapy).png",
     },
     {
       title: "Immunotherapy and CAR-T Cell Therapy",
-      img: "/Immunotherapy and CAR-T Cell Therapy .png",
+      img: "/Immunotherapy and CAR-T Cell Therapy.png",
     },
     {
       title: "Surgical Oncology (Minimally Invasive and Robotic)",
@@ -26,7 +26,7 @@ export default function Treatment() {
     },
     {
       title: "Palliative and Integrative Cancer Care",
-      img: "/Palliative and Integrative Cancer Care .png",
+      img: "/Palliative and Integrative Cancer Care.png",
     },
   ];
 

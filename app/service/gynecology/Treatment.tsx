@@ -6,23 +6,23 @@ export default function Treatment() {
   const items = [
     {
       title: "Laparoscopic and Robotic Gynecologic Surgery",
-      img: "/Laparoscopic and Robotic Gynecologic Surgery .png",
+      img: "/Laparoscopic and Robotic Gynecologic Surgery.png",
     },
     {
       title: "Fibroid and Endometriosis Management",
-      img: "/Fibroid and Endometriosis Management .png",
+      img: "/Fibroid and Endometriosis Management.png",
     },
     {
       title: "Hormonal and Menopause Therapy",
-      img: "/Hormonal and Menopause Therapy .png",
+      img: "/Hormonal and Menopause Therapy.png",
     },
     {
       title: "Fertility and Reproductive Health Care",
-      img: "/Fertility and Reproductive Health Care .png",
+      img: "/Fertility and Reproductive Health Care.png",
     },
     {
       title: "Prenatal and Postnatal Support",
-      img: "/Prenatal and Postnatal Support .png",
+      img: "/Prenatal and Postnatal Support.png",
     },
     {
       title: "Comprehensive Women's Wellness",

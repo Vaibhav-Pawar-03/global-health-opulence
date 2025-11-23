@@ -22,7 +22,7 @@ export default function Treatment() {
     },
     {
       title: "Post-Transplant Immunotherapy and Follow-Up Care",
-      img: "/Immunotherapy and CAR-T Cell Therapy .png",
+      img: "/Immunotherapy and CAR-T Cell Therapy.png",
     },
     {
       title: "Advanced Transplantation Programs",

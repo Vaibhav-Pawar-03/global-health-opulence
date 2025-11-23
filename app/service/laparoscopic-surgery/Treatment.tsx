@@ -14,7 +14,7 @@ export default function Treatment() {
     },
     {
       title: "Gynecologic and Urologic Surgeries",
-      img: "/Laparoscopic and Robotic Gynecologic Surgery .png",
+      img: "/Laparoscopic and Robotic Gynecologic Surgery.png",
     },
     {
       title: "Gastrointestinal and Colorectal Surgery",

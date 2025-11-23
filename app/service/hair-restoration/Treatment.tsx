@@ -6,23 +6,23 @@ export default function Treatment() {
   const items = [
     {
       title: "FUE (Follicular Unit Extraction) Hair Transplant",
-      img: "/FUE (Follicular Unit Extraction) Hair Transplant .png",
+      img: "/FUE (Follicular Unit Extraction) Hair Transplant.png",
     },
     {
       title: "DHI (Direct Hair Implantation)",
-      img: "/DHI (Direct Hair Implantation) .png",
+      img: "/DHI (Direct Hair Implantation).png",
     },
     {
       title: "Sapphire Hair Transplant",
-      img: "/Sapphire Hair Transplant .png",
+      img: "/Sapphire Hair Transplant.png",
     },
     {
       title: "Beard and Eyebrow Restoration",
-      img: "/Beard and Eyebrow Restoration .png",
+      img: "/Beard and Eyebrow Restoration.png",
     },
     {
       title: "PRP and Stem Cell Scalp Therapy",
-      img: "/PRP and Stem Cell Scalp Therapy .png",
+      img: "/PRP and Stem Cell Scalp Therapy.png",
     },
     {
       title: "Revision and Density Correction Transplants",

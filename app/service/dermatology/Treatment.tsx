@@ -6,23 +6,23 @@ export default function Treatment() {
   const items = [
     {
       title: "Laser Skin Resurfacing and Rejuvenation",
-      img: "/Laser Skin Resurfacing and Rejuvenation .png",
+      img: "/Laser Skin Resurfacing and Rejuvenation.png",
     },
     {
       title: "Botox, Fillers, and Thread Lift Treatments",
-      img: "/Botox, Fillers, and Thread Lift Treatments .png",
+      img: "/Botox, Fillers, and Thread Lift Treatments.png",
     },
     {
       title: "Acne Scar Revision and Pigmentation Correction",
-      img: "/Acne Scar Revision and Pigmentation Correction .png",
+      img: "/Acne Scar Revision and Pigmentation Correction.png",
     },
     {
       title: "PRP and Mesotherapy for Skin Renewal",
-      img: "/PRP and Mesotherapy for Skin Renewal .png",
+      img: "/PRP and Mesotherapy for Skin Renewal.png",
     },
     {
       title: "Chemical Peels and Anti-Aging Therapies",
-      img: "/Chemical Peels and Anti-Aging Therapies .png",
+      img: "/Chemical Peels and Anti-Aging Therapies.png",
     },
     {
       title: "Body Contouring and Skin Tightening",

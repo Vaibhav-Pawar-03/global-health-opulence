@@ -6,11 +6,11 @@ export default function Treatment() {
   const items = [
     {
       title: "Laser Eye Surgery (LASIK, SMILE)",
-      img: "/LASIK and SMILE Eye Surgery .png",
+      img: "/LASIK and SMILE Eye Surgery.png",
     },
     {
       title: "Skin Resurfacing and Pigmentation Removal",
-      img: "/Laser Skin Resurfacing and Rejuvenation .png",
+      img: "/Laser Skin Resurfacing and Rejuvenation.png",
     },
     {
       title: "Laser Tumor and Varicose Vein Treatment",

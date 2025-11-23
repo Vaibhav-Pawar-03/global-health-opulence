@@ -6,23 +6,23 @@ export default function Treatment() {
   const items = [
     {
       title: "Sinus Surgery and Septoplasty",
-      img: "/Sinus Surgery and Septoplasty .png",
+      img: "/Sinus Surgery and Septoplasty.png",
     },
     {
       title: "Cochlear Implants and Hearing Restoration",
-      img: "/Cochlear Implants and Hearing Restoration .png",
+      img: "/Cochlear Implants and Hearing Restoration.png",
     },
     {
       title: "Tonsil and Adenoid Surgery",
-      img: "/Tonsil and Adenoid Surgery .png",
+      img: "/Tonsil and Adenoid Surgery.png",
     },
     {
       title: "Voice and Speech Therapy",
-      img: "/Voice and Speech Therapy .png",
+      img: "/Voice and Speech Therapy.png",
     },
     {
       title: "Allergy and Sleep Apnea Treatment",
-      img: "/Allergy and Sleep Apnea Treatment .png",
+      img: "/Allergy and Sleep Apnea Treatment.png",
     },
     {
       title: "Advanced Head and Neck Procedures",
