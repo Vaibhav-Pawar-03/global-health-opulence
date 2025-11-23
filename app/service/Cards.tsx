@@ -161,7 +161,7 @@ export default function Cards() {
             {visibleCards.map((item, index) => {
               const cardContent = (
                 <div
-                  className={`bg-white rounded-[32px] p-6 shadow-md hover:shadow-xl transition-all duration-300 flex items-start gap-6 ${item.link ? 'cursor-pointer' : ''}`}
+                  className={`bg-white rounded-4xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex items-start gap-6 ${item.link ? 'cursor-pointer' : ''}`}
                 >
                   {/* Icon */}
                   <div className="shrink-0">

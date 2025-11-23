@@ -13,7 +13,7 @@ const navLinks = [
   { href: "/destinations", label: "Destinations" },
   { href: "/hospitals", label: "Hospitals" },
   { href: "/service", label: "Treatments & Procedures" },
-  { href: "#", label: "About us" },
+  { href: "/about", label: "About us" },
   { href: "#", label: "Blog" },
 ];
 

@@ -34,7 +34,7 @@ export default function Hero() {
 
         {/* RIGHT IMAGE */}
         <div className="relative flex justify-center">
-          <div className="rounded-2xl  overflow-hidden bg-gradient-to-br from-white  p-3">
+          <div className="rounded-2xl  overflow-hidden bg-linear-to-br from-white  p-3">
             <Image
               src="/sd.png" 
               alt="Service Image"
