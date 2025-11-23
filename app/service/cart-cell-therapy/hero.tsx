@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="relative flex justify-center">
           <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-white p-3">
             <Image
-              src="/CAR-T Cell.png"
+              src="/hero-cart-cell.jpg"
               alt="CAR-T Cell Therapy"
               width={600}
               height={400}

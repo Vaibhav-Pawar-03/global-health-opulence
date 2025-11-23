@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="relative flex justify-center">
           <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-white p-3">
             <Image
-              src="/Spine Care and Surgery.png"
+              src="/hero-spine-care.jpg"
               alt="Spine Care and Surgery"
               width={600}
               height={400}
