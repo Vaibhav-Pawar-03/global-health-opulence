@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="relative flex justify-center">
           <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-white p-3">
             <Image
-              src="/Bariatric.png"
+              src="/hero-bariatric.jpg"
               alt="Bariatric and Metabolic Surgery"
               width={600}
               height={400}

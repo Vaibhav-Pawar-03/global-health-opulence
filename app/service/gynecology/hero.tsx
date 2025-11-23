@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="relative flex justify-center">
           <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-white p-3">
             <Image
-              src="/Gynecology Treatment.png"
+              src="/hero-gynecology.jpg"
               alt="Gynecology Treatment"
               width={600}
               height={400}
