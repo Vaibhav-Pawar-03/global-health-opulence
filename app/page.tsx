@@ -9,6 +9,7 @@ import Compare from "./components/Compare";
 import Testimonials from "./components/Testimonials";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (
@@ -27,8 +28,9 @@ export default function Home() {
         <Compare />
         <Testimonials />
         <FAQSection />
+        <SpeedInsights />
       </main>
-
+      
       {/* Footer */}
       <Footer />
     </>
