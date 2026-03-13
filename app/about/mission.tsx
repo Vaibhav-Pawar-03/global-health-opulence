@@ -15,7 +15,7 @@ export default function MissionVision() {
         {/* Our Mission */}
         <div className="bg-[#D5EFEA] rounded-4xl p-10">
           <div className="flex items-center gap-4 mb-4">
-            <Star className="text-[#006341]" size={70} strokeWidth={2.5} />
+            <Star className="text-[#006341]" size={70} strokeWidth={2.5}/>
             <h3 className="text-5xl font-semibold text-[#0D2B29]">
               Our Mission
             </h3>
