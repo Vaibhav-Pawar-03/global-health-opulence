@@ -13,7 +13,7 @@ export default function Footer() {
           <p className="text-base leading-relaxed text-gray-300">
             Premium Medical Concierge <br />
             Accredited Global Partners <br />
-            24×7 Support
+            24/7 Support
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
 
         <div className="text-sm text-gray-400 order-1 md:order-2 text-center md:text-right">
-          HealNet 2024 © All Rights Reserved
+          HealNet 2024 © All Rights Reserved.
         </div>
       </div>
     </footer>
